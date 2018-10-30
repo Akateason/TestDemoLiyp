@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D690379CCA99D81F7B62823 /* libPods-TestYunpanSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3DFD54D792474127CD191D /* libPods-TestYunpanSDK.a */; };
+		635E8FCD30706296D2D4FE27 /* libPods-TestYunpanSDKTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA3070D5F2DD5F0CD82B98C0 /* libPods-TestYunpanSDKTests.a */; };
 		8FC5F30F2178865D009B4042 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5F30E2178865D009B4042 /* AppDelegate.m */; };
 		8FC5F3122178865D009B4042 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5F3112178865D009B4042 /* ViewController.m */; };
 		8FC5F3152178865D009B4042 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FC5F3132178865D009B4042 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 		8FC5F31D2178865F009B4042 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5F31C2178865F009B4042 /* main.m */; };
 		8FC5F3272178865F009B4042 /* TestYunpanSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5F3262178865F009B4042 /* TestYunpanSDKTests.m */; };
 		8FC5F3322178865F009B4042 /* TestYunpanSDKUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5F3312178865F009B4042 /* TestYunpanSDKUITests.m */; };
+		8FC5F3462178DCD0009B4042 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8FC5F3452178DCD0009B4042 /* Podfile */; };
+		92102C50812B335E3B5FDAD1 /* libPods-TestYunpanSDKUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7DADAA4D6043602F353A11 /* libPods-TestYunpanSDKUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07DD93C351AD26F119CD9BF2 /* Pods-TestYunpanSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestYunpanSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestYunpanSDK/Pods-TestYunpanSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		16B62B0E1A48AD3FFDF4BA54 /* Pods-TestYunpanSDKUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestYunpanSDKUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestYunpanSDKUITests/Pods-TestYunpanSDKUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1ABACCE9F1DFA76530256809 /* Pods-TestYunpanSDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestYunpanSDKTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestYunpanSDKTests/Pods-TestYunpanSDKTests.release.xcconfig"; sourceTree = "<group>"; };
 		8FC5F30A2178865C009B4042 /* TestYunpanSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestYunpanSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FC5F30D2178865D009B4042 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8FC5F30E2178865D009B4042 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +58,13 @@
 		8FC5F32D2178865F009B4042 /* TestYunpanSDKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestYunpanSDKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FC5F3312178865F009B4042 /* TestYunpanSDKUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestYunpanSDKUITests.m; sourceTree = "<group>"; };
 		8FC5F3332178865F009B4042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FC5F3452178DCD0009B4042 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		924D178AF2A4BA01E5FBC096 /* Pods-TestYunpanSDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestYunpanSDKTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestYunpanSDKTests/Pods-TestYunpanSDKTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BA3070D5F2DD5F0CD82B98C0 /* libPods-TestYunpanSDKTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestYunpanSDKTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA3DFD54D792474127CD191D /* libPods-TestYunpanSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestYunpanSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCA3ECEE6E6661516BE6F3AB /* Pods-TestYunpanSDKUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestYunpanSDKUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestYunpanSDKUITests/Pods-TestYunpanSDKUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DD7DADAA4D6043602F353A11 /* libPods-TestYunpanSDKUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestYunpanSDKUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE42B39B18A7C56F2DEEBFFF /* Pods-TestYunpanSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestYunpanSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestYunpanSDK/Pods-TestYunpanSDK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D690379CCA99D81F7B62823 /* libPods-TestYunpanSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635E8FCD30706296D2D4FE27 /* libPods-TestYunpanSDKTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +88,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92102C50812B335E3B5FDAD1 /* libPods-TestYunpanSDKUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		660995633B4B2ACE7097A3F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA3DFD54D792474127CD191D /* libPods-TestYunpanSDK.a */,
+				BA3070D5F2DD5F0CD82B98C0 /* libPods-TestYunpanSDKTests.a */,
+				DD7DADAA4D6043602F353A11 /* libPods-TestYunpanSDKUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8FC5F3012178865C009B4042 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +112,8 @@
 				8FC5F3252178865F009B4042 /* TestYunpanSDKTests */,
 				8FC5F3302178865F009B4042 /* TestYunpanSDKUITests */,
 				8FC5F30B2178865C009B4042 /* Products */,
+				F550798850AFD743E119D31A /* Pods */,
+				660995633B4B2ACE7097A3F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +130,7 @@
 		8FC5F30C2178865C009B4042 /* TestYunpanSDK */ = {
 			isa = PBXGroup;
 			children = (
+				8FC5F3452178DCD0009B4042 /* Podfile */,
 				8FC5F30D2178865D009B4042 /* AppDelegate.h */,
 				8FC5F30E2178865D009B4042 /* AppDelegate.m */,
 				8FC5F3102178865D009B4042 /* ViewController.h */,
@@ -132,6 +162,19 @@
 			path = TestYunpanSDKUITests;
 			sourceTree = "<group>";
 		};
+		F550798850AFD743E119D31A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07DD93C351AD26F119CD9BF2 /* Pods-TestYunpanSDK.debug.xcconfig */,
+				EE42B39B18A7C56F2DEEBFFF /* Pods-TestYunpanSDK.release.xcconfig */,
+				924D178AF2A4BA01E5FBC096 /* Pods-TestYunpanSDKTests.debug.xcconfig */,
+				1ABACCE9F1DFA76530256809 /* Pods-TestYunpanSDKTests.release.xcconfig */,
+				16B62B0E1A48AD3FFDF4BA54 /* Pods-TestYunpanSDKUITests.debug.xcconfig */,
+				DCA3ECEE6E6661516BE6F3AB /* Pods-TestYunpanSDKUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +182,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FC5F3362178865F009B4042 /* Build configuration list for PBXNativeTarget "TestYunpanSDK" */;
 			buildPhases = (
+				9B465C1EC98CCF669EE43A7E /* [CP] Check Pods Manifest.lock */,
 				8FC5F3062178865C009B4042 /* Sources */,
 				8FC5F3072178865C009B4042 /* Frameworks */,
 				8FC5F3082178865C009B4042 /* Resources */,
+				7E25AB7AE0EB37835444EBF1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -156,6 +201,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FC5F3392178865F009B4042 /* Build configuration list for PBXNativeTarget "TestYunpanSDKTests" */;
 			buildPhases = (
+				EE70C5CA39853FCE3073A6C1 /* [CP] Check Pods Manifest.lock */,
 				8FC5F31E2178865F009B4042 /* Sources */,
 				8FC5F31F2178865F009B4042 /* Frameworks */,
 				8FC5F3202178865F009B4042 /* Resources */,
@@ -174,6 +220,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FC5F33C2178865F009B4042 /* Build configuration list for PBXNativeTarget "TestYunpanSDKUITests" */;
 			buildPhases = (
+				71D496A77D33ABBD8F3E1573 /* [CP] Check Pods Manifest.lock */,
 				8FC5F3292178865F009B4042 /* Sources */,
 				8FC5F32A2178865F009B4042 /* Frameworks */,
 				8FC5F32B2178865F009B4042 /* Resources */,
@@ -237,6 +284,7 @@
 			files = (
 				8FC5F31A2178865F009B4042 /* LaunchScreen.storyboard in Resources */,
 				8FC5F3172178865F009B4042 /* Assets.xcassets in Resources */,
+				8FC5F3462178DCD0009B4042 /* Podfile in Resources */,
 				8FC5F3152178865D009B4042 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +304,191 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		71D496A77D33ABBD8F3E1573 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestYunpanSDKUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E25AB7AE0EB37835444EBF1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TestYunpanSDK/Pods-TestYunpanSDK-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+				"${PODS_ROOT}/XTColor/XTColor/color/XTColors.plist",
+				"${PODS_ROOT}/XTlib/XTlib/XTlib/Components/CustomUIs/XTSegment/btBase.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Storyboard/Album.storyboard",
+				"${PODS_ROOT}/Yunpan/Yunpan/Storyboard/Cooperation.storyboard",
+				"${PODS_ROOT}/Yunpan/Yunpan/Storyboard/Editors.storyboard",
+				"${PODS_ROOT}/Yunpan/Yunpan/Storyboard/YPHome.storyboard",
+				"${PODS_ROOT}/Yunpan/Yunpan/V+VC/Album/AlbumnCell.xib",
+				"${PODS_ROOT}/Yunpan/Yunpan/V+VC/Album/CameraGroup/CameraGroupCell.xib",
+				"${PODS_ROOT}/Yunpan/Yunpan/V+VC/Cooperation/YPCoopMemberCell.xib",
+				"${PODS_ROOT}/Yunpan/Yunpan/V+VC/FolderChoice/YPFolderCell.xib",
+				"${PODS_ROOT}/Yunpan/Yunpan/V+VC/List/ListSortView/YPListSortView.xib",
+				"${PODS_ROOT}/Yunpan/Yunpan/V+VC/List/ListSortView/YPSortConditionCell.xib",
+				"${PODS_ROOT}/Yunpan/Yunpan/V+VC/List/MultyChoice/MultyChoiceBottomBar.xib",
+				"${PODS_ROOT}/Yunpan/Yunpan/V+VC/List/MultyChoice/MultyChoiceTopBar.xib",
+				"${PODS_ROOT}/Yunpan/Yunpan/V+VC/List/YPListCell.xib",
+				"${PODS_ROOT}/Yunpan/Yunpan/V+VC/Transfer/UploadList/UploadCell.xib",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/album/ab_b_t_icon@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/album/ab_select@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/album/ab_selected@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/album/ab_t_icon@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/ImageEditor/ie_btdownload@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/ImageEditor/ie_topbar_btclose@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/ImageEditor/ie_topbar_btdelete@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/arrow_bar_down@2x .png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/arrow_bar_up@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/bar_coop@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/bar_delete@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/bar_download@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/bar_more@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/bar_move@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/bt_newfolder@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/bt_selected@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/bt_unselect@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/bt_uploadImage@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/choosen_mark@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/list_bt_add@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/list_bt_trans@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/null_list_img@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/sortDown@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/sortUp@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/public/ios_filetype_cannt_preview@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/public/ios_filetype_folder@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/public/pgs_icon@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/public/triangle1@2x.png",
+				"${PODS_ROOT}/Yunpan/Yunpan/Image/public/userPlaceHolder@2x.png",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/XTColors.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/btBase.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Album.storyboardc",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Cooperation.storyboardc",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Editors.storyboardc",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YPHome.storyboardc",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AlbumnCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CameraGroupCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YPCoopMemberCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YPFolderCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YPListSortView.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YPSortConditionCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MultyChoiceBottomBar.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MultyChoiceTopBar.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YPListCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UploadCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ab_b_t_icon@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ab_select@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ab_selected@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ab_t_icon@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ie_btdownload@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ie_topbar_btclose@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ie_topbar_btdelete@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrow_bar_down@2x .png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrow_bar_up@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bar_coop@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bar_delete@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bar_download@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bar_more@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bar_move@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bt_newfolder@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bt_selected@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bt_unselect@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bt_uploadImage@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/choosen_mark@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/list_bt_add@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/list_bt_trans@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/null_list_img@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/sortDown@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/sortUp@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ios_filetype_cannt_preview@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ios_filetype_folder@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/pgs_icon@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/triangle1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/userPlaceHolder@2x.png",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestYunpanSDK/Pods-TestYunpanSDK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B465C1EC98CCF669EE43A7E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestYunpanSDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE70C5CA39853FCE3073A6C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestYunpanSDKTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8FC5F3062178865C009B4042 /* Sources */ = {
@@ -433,6 +666,7 @@
 		};
 		8FC5F3372178865F009B4042 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07DD93C351AD26F119CD9BF2 /* Pods-TestYunpanSDK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +684,7 @@
 		};
 		8FC5F3382178865F009B4042 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE42B39B18A7C56F2DEEBFFF /* Pods-TestYunpanSDK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -467,6 +702,7 @@
 		};
 		8FC5F33A2178865F009B4042 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 924D178AF2A4BA01E5FBC096 /* Pods-TestYunpanSDKTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -486,6 +722,7 @@
 		};
 		8FC5F33B2178865F009B4042 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ABACCE9F1DFA76530256809 /* Pods-TestYunpanSDKTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -505,6 +742,7 @@
 		};
 		8FC5F33D2178865F009B4042 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16B62B0E1A48AD3FFDF4BA54 /* Pods-TestYunpanSDKUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z35T9799TW;
@@ -523,6 +761,7 @@
 		};
 		8FC5F33E2178865F009B4042 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCA3ECEE6E6661516BE6F3AB /* Pods-TestYunpanSDKUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z35T9799TW;

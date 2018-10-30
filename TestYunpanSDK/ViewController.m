@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <Yunpan/SHMDriveSDK.h>
 
 @interface ViewController ()
 
@@ -17,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (IBAction)action:(id)sender {
+    UIViewController *vc = [[SHMDriveSDK sharedInstance] getStartCtrller] ;
+    [self.navigationController pushViewController:vc animated:YES] ;
 }
 
 

@@ -4,7 +4,6 @@
 [![License](https://img.shields.io/cocoapods/l/TestYunpanSDK.svg?style=flat)](http://cocoapods.org/pods/TestYunpanSDK)
 [![Platform](https://img.shields.io/cocoapods/p/TestYunpanSDK.svg?style=flat)](http://cocoapods.org/pods/TestYunpanSDK)
 
-## Snapshot
 
 ## Example
 

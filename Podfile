@@ -3,6 +3,7 @@
 
 source 'https://git.shimo.im/xietianchen/Yunpan_iOS_Spec.git'
 source 'https://github.com/CocoaPods/Specs.git'
+source 'https://git.shimo.im/shanghai/specs_iOS'
 
 
 target 'TestYunpanSDK' do
@@ -11,10 +12,11 @@ use_frameworks!
 
 
 
-pod 'Yunpan', :path => '../Yunpan/'
+#pod 'Yunpan', :path => '../Yunpan/'
 
-# pod 'Yunpan', :git => 'https://git.shimo.im/xietianchen/Yunpan.git'
-
+ pod 'Yunpan'
+ pod 'SMSHLogin'
+ pod 'XTlib'
 
   target 'TestYunpanSDKTests' do
     inherit! :search_paths

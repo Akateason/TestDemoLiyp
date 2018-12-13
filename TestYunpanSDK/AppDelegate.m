@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "SHMDriveSDK.h"
+#import <Yunpan/SHMDriveSDK.h>
+
 
 @interface AppDelegate () <SHMDriveSDKDelegate>
 
@@ -37,20 +38,16 @@
     return nil ;
 }
 
-- (NSString *)cookieInfo {
-    return
-    kSHMDriveSDK_isDevEnviroment
-    ?
-    @"shimo_dev_sid=s%3ARr4Gdi-Vs7EXhINUUpS8KKStKyMfgHLs.tTMpYPUDllikiY%2BBDtSUE9e%2FDBXioJxiXSYfPhxpE%2Fg"
-    :
-    @"shimo_sid=s%3ALEAh_cU10mMFOiZlbw_kmYeVvDMhzzsv.FSxWwyQNmxcSiN3DBxxxAKNduV9dmpNicAuVylHR6bE"
-    ;
+- (BOOL)onOpenFiletoEditor:(NSDictionary *)aFile localPath:(NSString *)path fromCtrller:(UIViewController *)fromCtrller {
+    return NO ;
 }
 
-- (void)onOpenFiletoEditor:(NSDictionary *)aFile localPath:(NSString *)path fromCtrller:(UIViewController *)fromCtrller {
-    
+- (BOOL)hiddenExitButton {
+    return YES ;
 }
 
-
+- (nonnull NSString *)tokenString {
+    return @"12" ;
+}
 
 @end

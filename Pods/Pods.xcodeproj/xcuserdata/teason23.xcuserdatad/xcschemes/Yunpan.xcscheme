@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "56A1BEC849B696F79B48FEAF954A598B"
+               BlueprintIdentifier = "34E82EF37991BF9E7D0ABFCF3F21D6CE"
                BlueprintName = "Yunpan"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "Yunpan.framework">

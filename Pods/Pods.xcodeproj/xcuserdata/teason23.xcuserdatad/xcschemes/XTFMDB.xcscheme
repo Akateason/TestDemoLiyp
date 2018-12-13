@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1497E022668B81F0EFF3E43A1F473FAB"
+               BlueprintIdentifier = "EFFC96E4232BE8AE4A02AADBA4822680"
                BlueprintName = "XTFMDB"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "XTFMDB.framework">

@@ -13,23 +13,22 @@
 #import "XTResponseDBModel.h"
 
 typedef NS_ENUM(NSUInteger, XTReqSaveJudgment) {
-    XTReqSaveJudgment_willSave      = 0 ,
-    XTReqSaveJudgment_NotSave       = 1 ,
-} ;
+    XTReqSaveJudgment_willSave = 0,
+    XTReqSaveJudgment_NotSave  = 1,
+};
+
 
 @interface XTCacheRequest : XTRequest
 
 #pragma mark - config
-
 /**
  config when App is launching .
  @param dbPath      local path string .
  */
-+ (void)configXTCacheReqWhenAppDidLaunchWithDBPath:(NSString *)dbPath ;
++ (void)configXTCacheReqWhenAppDidLaunchWithDBPath:(NSString *)dbPath;
 
 
-#pragma mark - main req
-
+#pragma mark - cache req
 /**
  XTCacheRequest judgeResult designated MAIN FUNC
  
@@ -54,7 +53,7 @@ typedef NS_ENUM(NSUInteger, XTReqSaveJudgment) {
              body:(NSString *)body
            policy:(XTReqPolicy)cachePolicy
    overTimeIfNeed:(int)overTimeIfNeed
-      judgeResult:(XTReqSaveJudgment(^)(BOOL isNewest, id json))completion ;
+      judgeResult:(XTReqSaveJudgment (^)(BOOL isNewest, id json))completion;
 
 /**
  XTCacheRequest completion MAIN FUNC
@@ -67,90 +66,17 @@ typedef NS_ENUM(NSUInteger, XTReqSaveJudgment) {
              body:(NSString *)body
            policy:(XTReqPolicy)cachePolicy
    overTimeIfNeed:(int)overTimeIfNeed
-       completion:(void(^)(BOOL isNewest, id json))completion ;
-
-#pragma mark - get
+       completion:(void (^)(BOOL isNewest, id json))completion;
 
 /**
- cacheGET header + param + completion
+ judgeResult with default policy
  */
-+ (void)cacheGET:(NSString *)url
-          header:(NSDictionary *)header
-      parameters:(NSDictionary *)param
-      completion:(void(^)(id json))completion ;
-/**
- cacheGET header + param + judgeResult
- */
-+ (void)cacheGET:(NSString *)url
-          header:(NSDictionary *)header
-      parameters:(NSDictionary *)param
-     judgeResult:(XTReqSaveJudgment (^)(id json))completion ;
-/**
- cacheGET header + param + hud + policy + completion
- */
-+ (void)cacheGET:(NSString *)url
-          header:(NSDictionary *)header
-      parameters:(NSDictionary *)param
-             hud:(BOOL)hud
-          policy:(XTReqPolicy)cachePolicy
-  overTimeIfNeed:(int)overTimeIfNeed
-      completion:(void(^)(id json))completion ;
-/**
- cacheGET header + param + hud + policy + judgeResult
- */
-+ (void)cacheGET:(NSString *)url
-          header:(NSDictionary *)header
-      parameters:(NSDictionary *)param
-             hud:(BOOL)hud
-          policy:(XTReqPolicy)cachePolicy
-  overTimeIfNeed:(int)overTimeIfNeed
-     judgeResult:(XTReqSaveJudgment (^)(id json))completion ;
-
-#pragma mark - post
-/**
- cachePOST header + param + completion
- */
-+ (void)cachePOST:(NSString *)url
-           header:(NSDictionary *)header
-       parameters:(NSDictionary *)param
-       completion:(void(^)(id json))completion ;
-/**
- cachePOST header + param + judgeResult
- */
-+ (void)cachePOST:(NSString *)url
-           header:(NSDictionary *)header
-       parameters:(NSDictionary *)param
-      judgeResult:(XTReqSaveJudgment (^)(id json))completion ;
-/**
- cachePOST header + param + body + policy + completion
- */
-+ (void)cachePOST:(NSString *)url
-           header:(NSDictionary *)header
-       parameters:(NSDictionary *)param
-             body:(NSString *)body
++ (void)cachedReq:(XTRequestMode)reqMode
+              url:(NSString *)url
               hud:(BOOL)hud
-           policy:(XTReqPolicy)cachePolicy
-   overTimeIfNeed:(int)overTimeIfNeed
-       completion:(void(^)(id json))completion ;
-/**
- cachePOST header + param + body + policy + judgeResult
- */
-+ (void)cachePOST:(NSString *)url
            header:(NSDictionary *)header
-       parameters:(NSDictionary *)param
+            param:(NSDictionary *)param
              body:(NSString *)body
-              hud:(BOOL)hud
-           policy:(XTReqPolicy)cachePolicy
-   overTimeIfNeed:(int)overTimeIfNeed
-      judgeResult:(XTReqSaveJudgment(^)(id json))completion ;
+      judgeResult:(XTReqSaveJudgment (^)(BOOL isNewest, id json))completion;
 
 @end
-
-
-
-
-
-
-
-
-

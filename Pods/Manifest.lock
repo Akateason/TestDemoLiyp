@@ -14,6 +14,21 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - BlocksKit (2.2.5):
+    - BlocksKit/All (= 2.2.5)
+  - BlocksKit/All (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - BlocksKit/MessageUI
+    - BlocksKit/UIKit
+  - BlocksKit/Core (2.2.5)
+  - BlocksKit/DynamicDelegate (2.2.5)
+  - BlocksKit/MessageUI (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - BlocksKit/UIKit (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
   - CHTCollectionViewWaterfallLayout (0.9.7):
     - CHTCollectionViewWaterfallLayout/ObjC (= 0.9.7)
   - CHTCollectionViewWaterfallLayout/ObjC (0.9.7)
@@ -23,104 +38,103 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
-  - FTPopOverMenu (2.0.1)
+  - FTPopOverMenu (2.0.3)
   - IQKeyboardManager (6.2.0)
   - LXMButtonImagePosition (1.2.0)
   - Masonry (1.1.0)
+  - MGSwipeTableCell (1.6.8)
   - MJRefresh (3.1.15.7)
+  - OpenShare (0.0.1)
   - ReactiveObjC (3.1.0)
   - RxWebViewController (0.0.2)
-  - SDWebImage (4.4.2):
-    - SDWebImage/Core (= 4.4.2)
-  - SDWebImage/Core (4.4.2)
+  - SDWebImage (4.4.3):
+    - SDWebImage/Core (= 4.4.3)
+  - SDWebImage/Core (4.4.3)
+  - SMSHLogin (0.0.2):
+    - BlocksKit
+    - FDFullscreenPopGesture
+    - IQKeyboardManager
+    - OpenShare
+    - XTBase
+    - XTColor
+    - XTReq
   - SSZipArchive (2.1.4)
   - SVProgressHUD (2.2.5)
   - "UITableView+FDTemplateLayoutCell (1.6)"
   - Valet (2.4.2)
+  - XTBase (0.0.11):
+    - CYLTableViewPlaceHolder
+    - FTPopOverMenu
+    - Masonry
+    - MJRefresh
+    - ReactiveObjC
+    - RxWebViewController
+    - SDWebImage
+    - SSZipArchive
+    - SVProgressHUD
+    - "UITableView+FDTemplateLayoutCell"
+    - Valet (= 2.4.2)
+    - YYModel
   - XTColor (1.0.3)
-  - XTFMDB (2.0.3):
+  - XTFMDB (2.0.5):
     - FMDB
     - YYModel
-  - XTlib (1.5.12):
-    - CYLTableViewPlaceHolder
-    - FTPopOverMenu
-    - Masonry
-    - MJRefresh
-    - ReactiveObjC
-    - RxWebViewController
-    - SDWebImage
-    - SSZipArchive
-    - Valet (= 2.4.2)
-    - XTColor
-    - XTFMDB (> 2.0.0)
-    - XTlib/base (= 1.5.12)
-    - XTReq (> 1.3.0)
-  - XTlib/Animations (1.5.12):
-    - CYLTableViewPlaceHolder
-    - FTPopOverMenu
-    - Masonry
-    - MJRefresh
-    - ReactiveObjC
-    - RxWebViewController
-    - SDWebImage
-    - SSZipArchive
-    - Valet (= 2.4.2)
-    - XTColor
-    - XTFMDB (> 2.0.0)
+  - XTlib (1.6.2):
+    - XTlib/base (= 1.6.2)
+  - XTlib/Animations (1.6.2):
     - XTlib/base
-    - XTReq (> 1.3.0)
-  - XTlib/base (1.5.12):
-    - CYLTableViewPlaceHolder
-    - FTPopOverMenu
-    - Masonry
-    - MJRefresh
-    - ReactiveObjC
-    - RxWebViewController
-    - SDWebImage
-    - SSZipArchive
-    - Valet (= 2.4.2)
+  - XTlib/base (1.6.2):
+    - BlocksKit
+    - FDFullscreenPopGesture
+    - IQKeyboardManager
+    - XTBase
     - XTColor
     - XTFMDB (> 2.0.0)
     - XTReq (> 1.3.0)
-  - XTlib/CustomUIs (1.5.12):
-    - CYLTableViewPlaceHolder
-    - FTPopOverMenu
-    - Masonry
-    - MJRefresh
-    - ReactiveObjC
-    - RxWebViewController
-    - SDWebImage
-    - SSZipArchive
-    - Valet (= 2.4.2)
-    - XTColor
-    - XTFMDB (> 2.0.0)
+  - XTlib/CustomUIs (1.6.2):
     - XTlib/base
-    - XTReq (> 1.3.0)
-  - XTReq (1.3.2):
+  - XTReq (2.1.0):
     - AFNetworking
     - SVProgressHUD
     - XTFMDB (> 2.0.0)
     - YYModel
-  - Yunpan (0.0.11):
+  - Yunpan (0.0.18):
     - CHTCollectionViewWaterfallLayout
+    - CYLTableViewPlaceHolder
     - DACircularProgress
     - FDFullscreenPopGesture
     - FTPopOverMenu
     - IQKeyboardManager
     - LXMButtonImagePosition
+    - MGSwipeTableCell
     - SSZipArchive
     - "UITableView+FDTemplateLayoutCell"
     - XTlib
     - XTlib/Animations
     - XTlib/CustomUIs
+    - YYWebImage
+  - YYCache (1.0.4)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
   - YYModel (1.0.4)
+  - YYWebImage (1.0.5):
+    - YYCache
+    - YYImage
 
 DEPENDENCIES:
-  - Yunpan (from `../Yunpan/`)
+  - SMSHLogin
+  - XTlib
+  - Yunpan
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://git.shimo.im/shanghai/specs_iOS:
+    - SMSHLogin
+  https://git.shimo.im/xietianchen/Yunpan_iOS_Spec:
+    - Yunpan
+  https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - BlocksKit
     - CHTCollectionViewWaterfallLayout
     - CYLTableViewPlaceHolder
     - DACircularProgress
@@ -130,7 +144,9 @@ SPEC REPOS:
     - IQKeyboardManager
     - LXMButtonImagePosition
     - Masonry
+    - MGSwipeTableCell
     - MJRefresh
+    - OpenShare
     - ReactiveObjC
     - RxWebViewController
     - SDWebImage
@@ -138,42 +154,50 @@ SPEC REPOS:
     - SVProgressHUD
     - "UITableView+FDTemplateLayoutCell"
     - Valet
+    - XTBase
     - XTColor
     - XTFMDB
     - XTlib
     - XTReq
+    - YYCache
+    - YYImage
     - YYModel
-
-EXTERNAL SOURCES:
-  Yunpan:
-    :path: "../Yunpan/"
+    - YYWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   CHTCollectionViewWaterfallLayout: 9d11068fafecac106695bb5a5d6d0f738483b598
   CYLTableViewPlaceHolder: 678e070180a24e2f241adc7830d5d7f5e2abbaa5
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  FTPopOverMenu: 7b076d7b3ae615f575c22b7ce85258a56370b99e
+  FTPopOverMenu: 8aa89de66e72b53db3e7eeab42243d393237768f
   IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
   LXMButtonImagePosition: 663e176be2c7e4ff99bcda808c364ebc3774af0f
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MGSwipeTableCell: dc4eca3212ed38a563b27d6aa7b3c01ce656c1e2
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  OpenShare: a560580dbb729d5c0c3cc1ee84cd6aa4a07e94c6
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   RxWebViewController: 79bcbf51aff13d93db9779404348b052ab0cd440
-  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
+  SMSHLogin: ece3afdc74a99203cf0c4bfbf4c6c7ee81a19210
   SSZipArchive: 41455d4b8d2b6ab93990820b50dc697c2554a322
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
   Valet: 14463ef24fab8fd5809044ecedb61484b799fdd6
+  XTBase: 39a60d115bb53c98281befee86dbf3c009a53ddd
   XTColor: 77dc1fb053ad58e6821d7de84fabbec361402d94
-  XTFMDB: e90ad2deda58b2b1105002d3d746a19243f7bd41
-  XTlib: d76a46627754afb7455a6d5aabfe5d5cde7ed630
-  XTReq: 7964aec068260ce11c3015d26851ff0f3728fde9
-  Yunpan: 6e94747a7b10f2ef3d2a5a56ffd8d2d71d3331cb
+  XTFMDB: c22446d1eeb347974fb579bd9284c9b48a6d4410
+  XTlib: d0a4aaa8dd08a170ac61726575fb3918a444f389
+  XTReq: f5added0278758ca358f62a3de30a118f1b6d94a
+  Yunpan: b53b57f175169d0759851ce6d51436ebd49b7b41
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: c703fd231f1e85fcb67142891e76447a4c2a6dd6
+PODFILE CHECKSUM: 98e29ad25824adaa5ed1d6b7bcbcf222b84f2694
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

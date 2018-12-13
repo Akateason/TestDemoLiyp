@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "68058CE3917B99959D0BF08571D7C673"
+               BlueprintIdentifier = "FA5368E7B5BC57E4AA8DEB2D794B2BF7"
                BlueprintName = "XTColor"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "XTColor.framework">

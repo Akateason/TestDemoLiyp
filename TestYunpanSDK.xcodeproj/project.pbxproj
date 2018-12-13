@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D690379CCA99D81F7B62823 /* libPods-TestYunpanSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3DFD54D792474127CD191D /* libPods-TestYunpanSDK.a */; };
-		635E8FCD30706296D2D4FE27 /* libPods-TestYunpanSDKTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA3070D5F2DD5F0CD82B98C0 /* libPods-TestYunpanSDKTests.a */; };
 		8FC5F30F2178865D009B4042 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5F30E2178865D009B4042 /* AppDelegate.m */; };
 		8FC5F3122178865D009B4042 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5F3112178865D009B4042 /* ViewController.m */; };
 		8FC5F3152178865D009B4042 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FC5F3132178865D009B4042 /* Main.storyboard */; };
@@ -18,7 +16,9 @@
 		8FC5F3272178865F009B4042 /* TestYunpanSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5F3262178865F009B4042 /* TestYunpanSDKTests.m */; };
 		8FC5F3322178865F009B4042 /* TestYunpanSDKUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5F3312178865F009B4042 /* TestYunpanSDKUITests.m */; };
 		8FC5F3462178DCD0009B4042 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8FC5F3452178DCD0009B4042 /* Podfile */; };
-		92102C50812B335E3B5FDAD1 /* libPods-TestYunpanSDKUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7DADAA4D6043602F353A11 /* libPods-TestYunpanSDKUITests.a */; };
+		97EF87BE4FA1E067C6A10921 /* Pods_TestYunpanSDKUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764C034E71AFC3A4F458EE83 /* Pods_TestYunpanSDKUITests.framework */; };
+		BEEBC82C6030621D97CC071D /* Pods_TestYunpanSDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C88FC02810540846AF58B8 /* Pods_TestYunpanSDKTests.framework */; };
+		E71F1333A6A7D0F412E4C33B /* Pods_TestYunpanSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D069B2A92ED58242C105D16 /* Pods_TestYunpanSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +42,8 @@
 		07DD93C351AD26F119CD9BF2 /* Pods-TestYunpanSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestYunpanSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestYunpanSDK/Pods-TestYunpanSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		16B62B0E1A48AD3FFDF4BA54 /* Pods-TestYunpanSDKUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestYunpanSDKUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestYunpanSDKUITests/Pods-TestYunpanSDKUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1ABACCE9F1DFA76530256809 /* Pods-TestYunpanSDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestYunpanSDKTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestYunpanSDKTests/Pods-TestYunpanSDKTests.release.xcconfig"; sourceTree = "<group>"; };
+		1D069B2A92ED58242C105D16 /* Pods_TestYunpanSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestYunpanSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		764C034E71AFC3A4F458EE83 /* Pods_TestYunpanSDKUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestYunpanSDKUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FC5F30A2178865C009B4042 /* TestYunpanSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestYunpanSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FC5F30D2178865D009B4042 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8FC5F30E2178865D009B4042 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -58,12 +60,10 @@
 		8FC5F32D2178865F009B4042 /* TestYunpanSDKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestYunpanSDKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FC5F3312178865F009B4042 /* TestYunpanSDKUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestYunpanSDKUITests.m; sourceTree = "<group>"; };
 		8FC5F3332178865F009B4042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8FC5F3452178DCD0009B4042 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		8FC5F3452178DCD0009B4042 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		924D178AF2A4BA01E5FBC096 /* Pods-TestYunpanSDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestYunpanSDKTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestYunpanSDKTests/Pods-TestYunpanSDKTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BA3070D5F2DD5F0CD82B98C0 /* libPods-TestYunpanSDKTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestYunpanSDKTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA3DFD54D792474127CD191D /* libPods-TestYunpanSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestYunpanSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0C88FC02810540846AF58B8 /* Pods_TestYunpanSDKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestYunpanSDKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA3ECEE6E6661516BE6F3AB /* Pods-TestYunpanSDKUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestYunpanSDKUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestYunpanSDKUITests/Pods-TestYunpanSDKUITests.release.xcconfig"; sourceTree = "<group>"; };
-		DD7DADAA4D6043602F353A11 /* libPods-TestYunpanSDKUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestYunpanSDKUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE42B39B18A7C56F2DEEBFFF /* Pods-TestYunpanSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestYunpanSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestYunpanSDK/Pods-TestYunpanSDK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D690379CCA99D81F7B62823 /* libPods-TestYunpanSDK.a in Frameworks */,
+				E71F1333A6A7D0F412E4C33B /* Pods_TestYunpanSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				635E8FCD30706296D2D4FE27 /* libPods-TestYunpanSDKTests.a in Frameworks */,
+				BEEBC82C6030621D97CC071D /* Pods_TestYunpanSDKTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92102C50812B335E3B5FDAD1 /* libPods-TestYunpanSDKUITests.a in Frameworks */,
+				97EF87BE4FA1E067C6A10921 /* Pods_TestYunpanSDKUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,9 +98,9 @@
 		660995633B4B2ACE7097A3F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DA3DFD54D792474127CD191D /* libPods-TestYunpanSDK.a */,
-				BA3070D5F2DD5F0CD82B98C0 /* libPods-TestYunpanSDKTests.a */,
-				DD7DADAA4D6043602F353A11 /* libPods-TestYunpanSDKUITests.a */,
+				1D069B2A92ED58242C105D16 /* Pods_TestYunpanSDK.framework */,
+				B0C88FC02810540846AF58B8 /* Pods_TestYunpanSDKTests.framework */,
+				764C034E71AFC3A4F458EE83 /* Pods_TestYunpanSDKUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -186,7 +186,7 @@
 				8FC5F3062178865C009B4042 /* Sources */,
 				8FC5F3072178865C009B4042 /* Frameworks */,
 				8FC5F3082178865C009B4042 /* Resources */,
-				7E25AB7AE0EB37835444EBF1 /* [CP] Copy Pods Resources */,
+				D056E65DDBA326498507E52F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -328,122 +328,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7E25AB7AE0EB37835444EBF1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TestYunpanSDK/Pods-TestYunpanSDK-resources.sh",
-				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
-				"${PODS_ROOT}/XTColor/XTColor/color/XTColors.plist",
-				"${PODS_ROOT}/XTlib/XTlib/XTlib/Components/CustomUIs/XTSegment/btBase.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Storyboard/Album.storyboard",
-				"${PODS_ROOT}/Yunpan/Yunpan/Storyboard/Cooperation.storyboard",
-				"${PODS_ROOT}/Yunpan/Yunpan/Storyboard/Editors.storyboard",
-				"${PODS_ROOT}/Yunpan/Yunpan/Storyboard/YPHome.storyboard",
-				"${PODS_ROOT}/Yunpan/Yunpan/V+VC/Album/AlbumnCell.xib",
-				"${PODS_ROOT}/Yunpan/Yunpan/V+VC/Album/CameraGroup/CameraGroupCell.xib",
-				"${PODS_ROOT}/Yunpan/Yunpan/V+VC/Cooperation/YPCoopMemberCell.xib",
-				"${PODS_ROOT}/Yunpan/Yunpan/V+VC/FolderChoice/YPFolderCell.xib",
-				"${PODS_ROOT}/Yunpan/Yunpan/V+VC/List/ListSortView/YPListSortView.xib",
-				"${PODS_ROOT}/Yunpan/Yunpan/V+VC/List/ListSortView/YPSortConditionCell.xib",
-				"${PODS_ROOT}/Yunpan/Yunpan/V+VC/List/MultyChoice/MultyChoiceBottomBar.xib",
-				"${PODS_ROOT}/Yunpan/Yunpan/V+VC/List/MultyChoice/MultyChoiceTopBar.xib",
-				"${PODS_ROOT}/Yunpan/Yunpan/V+VC/List/YPListCell.xib",
-				"${PODS_ROOT}/Yunpan/Yunpan/V+VC/Transfer/UploadList/UploadCell.xib",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/album/ab_b_t_icon@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/album/ab_select@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/album/ab_selected@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/album/ab_t_icon@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/ImageEditor/ie_btdownload@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/ImageEditor/ie_topbar_btclose@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/ImageEditor/ie_topbar_btdelete@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/arrow_bar_down@2x .png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/arrow_bar_up@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/bar_coop@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/bar_delete@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/bar_download@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/bar_more@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/bar_move@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/bt_newfolder@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/bt_selected@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/bt_unselect@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/bt_uploadImage@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/choosen_mark@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/list_bt_add@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/list_bt_trans@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/null_list_img@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/sortDown@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/List/sortUp@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/public/ios_filetype_cannt_preview@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/public/ios_filetype_folder@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/public/pgs_icon@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/public/triangle1@2x.png",
-				"${PODS_ROOT}/Yunpan/Yunpan/Image/public/userPlaceHolder@2x.png",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/XTColors.plist",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/btBase.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Album.storyboardc",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Cooperation.storyboardc",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Editors.storyboardc",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YPHome.storyboardc",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AlbumnCell.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CameraGroupCell.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YPCoopMemberCell.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YPFolderCell.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YPListSortView.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YPSortConditionCell.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MultyChoiceBottomBar.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MultyChoiceTopBar.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YPListCell.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UploadCell.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ab_b_t_icon@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ab_select@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ab_selected@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ab_t_icon@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ie_btdownload@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ie_topbar_btclose@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ie_topbar_btdelete@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrow_bar_down@2x .png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrow_bar_up@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bar_coop@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bar_delete@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bar_download@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bar_more@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bar_move@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bt_newfolder@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bt_selected@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bt_unselect@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/bt_uploadImage@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/choosen_mark@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/list_bt_add@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/list_bt_trans@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/null_list_img@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/sortDown@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/sortUp@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ios_filetype_cannt_preview@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ios_filetype_folder@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/pgs_icon@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/triangle1@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/userPlaceHolder@2x.png",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestYunpanSDK/Pods-TestYunpanSDK-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9B465C1EC98CCF669EE43A7E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -464,6 +348,74 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D056E65DDBA326498507E52F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TestYunpanSDK/Pods-TestYunpanSDK-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/CHTCollectionViewWaterfallLayout/CHTCollectionViewWaterfallLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/CYLTableViewPlaceHolder/CYLTableViewPlaceHolder.framework",
+				"${BUILT_PRODUCTS_DIR}/DACircularProgress/DACircularProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/FTPopOverMenu/FTPopOverMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/LXMButtonImagePosition/LXMButtonImagePosition.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/RxWebViewController/RxWebViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework",
+				"${BUILT_PRODUCTS_DIR}/Valet/Valet.framework",
+				"${BUILT_PRODUCTS_DIR}/XTColor/XTColor.framework",
+				"${BUILT_PRODUCTS_DIR}/XTFMDB/XTFMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/XTReq/XTReq.framework",
+				"${BUILT_PRODUCTS_DIR}/XTlib/XTlib.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+				"${BUILT_PRODUCTS_DIR}/Yunpan/Yunpan.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CHTCollectionViewWaterfallLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CYLTableViewPlaceHolder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DACircularProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDFullscreenPopGesture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FTPopOverMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LXMButtonImagePosition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxWebViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITableView_FDTemplateLayoutCell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Valet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XTColor.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XTFMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XTReq.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XTlib.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Yunpan.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestYunpanSDK/Pods-TestYunpanSDK-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EE70C5CA39853FCE3073A6C1 /* [CP] Check Pods Manifest.lock */ = {

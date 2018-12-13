@@ -22,7 +22,8 @@
 
 - (IBAction)action:(id)sender {
     UIViewController *vc = [[SHMDriveSDK sharedInstance] getStartCtrller] ;
-    [self.navigationController pushViewController:vc animated:YES] ;
+    YPNavVC *nav = [[YPNavVC alloc] initWithRootViewController:vc] ;    
+    [self presentViewController:nav animated:YES completion:nil] ;
 }
 
 

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8CC804E21BF11B98AD89BD316AD0B04D"
+               BlueprintIdentifier = "01AC765C0D2E39C1DF17B38ABF47ABBB"
                BlueprintName = "FTPopOverMenu"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libFTPopOverMenu.a">
+               BuildableName = "FTPopOverMenu.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -6,10 +6,11 @@
 //  Copyright © 2017年 teason. All rights reserved.
 //
 
-#import "XTDBModel.h"
+#import <Foundation/Foundation.h>
 
-@interface XTDBVersion : XTDBModel
 
-@property (assign,nonatomic) int version ;
+@interface XTDBVersion : NSObject
+
+@property (assign, nonatomic) int version;
 
 @end

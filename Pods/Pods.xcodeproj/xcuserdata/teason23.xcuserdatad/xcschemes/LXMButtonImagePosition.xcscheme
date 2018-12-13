@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "36E43B222A617457FB749FD43AB25DC0"
+               BlueprintIdentifier = "7576DDB9BF63AC4025760327184FAEC4"
                BlueprintName = "LXMButtonImagePosition"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libLXMButtonImagePosition.a">
+               BuildableName = "LXMButtonImagePosition.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

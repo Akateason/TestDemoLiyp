@@ -109,6 +109,7 @@ typedef NS_ENUM(NSUInteger, FTPopOverMenuArrowDirection) {
         self.shadowOpacity = FTDefaultShadowOpacity;
         self.shadowOffsetX = FTDefaultShadowOffsetX;
         self.shadowOffsetY = FTDefaultShadowOffsetY;
+        self.coverBackgroundColor = FTDefaultBackgroundColor;
     }
     return self;
 }
@@ -196,7 +197,7 @@ typedef NS_ENUM(NSUInteger, FTPopOverMenuArrowDirection) {
  get image from local or remote
 
  @param resource image reource
- @param doneBlock get image back
+ @param completion get image back
  */
 - (void)getImageWithResource:(id)resource completion:(void (^)(UIImage *image))completion {
     if ([resource isKindOfClass:[UIImage class]]) {
@@ -219,7 +220,7 @@ typedef NS_ENUM(NSUInteger, FTPopOverMenuArrowDirection) {
  download image if needed, cache image into disk if needed.
 
  @param url imageURL
- @param doneBlock get image back
+ @param completion get image back
  */
 - (void)downloadImageWithURL:(NSURL *)url completion:(void (^)(UIImage *image))completion {
     if ([self isExitImageForImageURL:url]) {
@@ -696,7 +697,7 @@ typedef NS_ENUM(NSUInteger, FTPopOverMenuArrowDirection) {
 }
 
 - (void)adjustPopOverMenu {
-
+    self.backgroundView.backgroundColor = self.config.coverBackgroundColor;
     [self.backgroundView setFrame:CGRectMake(0, 0, KSCREEN_WIDTH, KSCREEN_HEIGHT)];
 
     CGRect senderRect ;

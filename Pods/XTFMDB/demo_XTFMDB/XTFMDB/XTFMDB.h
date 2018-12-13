@@ -9,10 +9,9 @@
 #ifndef XTFMDB_h
 #define XTFMDB_h
 
-#import "XTFMDBConst.h"
-#import "XTFMDBBase.h"
-#import "XTDBModel.h"
-#import "NSObject+XTFMDB.h"
 #import "NSArray+XTFMDB.h"
+#import "NSObject+XTFMDB.h"
+#import "XTFMDBBase.h"
+#import "XTFMDBConst.h"
 
 #endif /* XTFMDB_h */

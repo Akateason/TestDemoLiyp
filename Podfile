@@ -6,14 +6,14 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 
 target 'TestYunpanSDK' do
-  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  # use_frameworks!
 
-  # Pods for TestYunpanSDK
+use_frameworks!
 
-# pod 'Yunpan', :path => '../Yunpan/'
 
-pod 'Yunpan', :git => 'https://git.shimo.im/xietianchen/Yunpan.git'
+
+pod 'Yunpan', :path => '../Yunpan/'
+
+# pod 'Yunpan', :git => 'https://git.shimo.im/xietianchen/Yunpan.git'
 
 
   target 'TestYunpanSDKTests' do

@@ -1,0 +1,6 @@
+framework module Yunpan {
+  umbrella header "Yunpan-umbrella.h"
+
+  export *
+  module * { export * }
+}

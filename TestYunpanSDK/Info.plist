@@ -41,5 +41,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>请允许石墨云盘获取您更多的相册权限</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>请允许石墨云盘访问您的照片</string>
 </dict>
 </plist>

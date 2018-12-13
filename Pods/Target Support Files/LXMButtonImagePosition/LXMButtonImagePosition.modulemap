@@ -1,0 +1,6 @@
+framework module LXMButtonImagePosition {
+  umbrella header "LXMButtonImagePosition-umbrella.h"
+
+  export *
+  module * { export * }
+}

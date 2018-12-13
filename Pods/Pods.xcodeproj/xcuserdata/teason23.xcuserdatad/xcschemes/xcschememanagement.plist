@@ -184,6 +184,13 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
+			<integer>27</integer>
+		</dict>
+		<key>Yunpan-Yunpan.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
 			<integer>26</integer>
 		</dict>
 		<key>Yunpan.xcscheme</key>

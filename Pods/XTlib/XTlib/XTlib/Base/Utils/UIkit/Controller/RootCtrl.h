@@ -8,17 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-#import "Masonry.h"
-#import "YYModel.h"
-#import "SVProgressHUD.h"
+#import <Masonry/Masonry.h>
+#import <YYModel/YYModel.h>
+#import <SVProgressHUD/SVProgressHUD.h>
 #import <ReactiveObjC/ReactiveObjC.h>
-
 
 @interface RootCtrl : UIViewController
 
-@property (copy, nonatomic) NSString *myStatTitle ; // title for stat if needed.
+@property (copy, nonatomic) NSString *myStatTitle; // title for stat if needed.
 
-- (void)prepare ;
-- (void)prepareUI ;
+- (void)prepare;
+- (void)prepareUI;
 
 @end

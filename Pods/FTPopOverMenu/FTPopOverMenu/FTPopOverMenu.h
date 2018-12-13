@@ -11,7 +11,7 @@
 /**
  *  FTPopOverMenuDoneBlock
  *
- *  @param index SlectedIndex
+ *  @param selectedIndex SlectedIndex
  */
 typedef void (^FTPopOverMenuDoneBlock)(NSInteger selectedIndex);
 /**
@@ -58,6 +58,8 @@ typedef void (^FTPopOverMenuDismissBlock)(void);
 @property (nonatomic, assign) CGFloat shadowRadius;
 @property (nonatomic, assign) CGFloat shadowOffsetX;
 @property (nonatomic, assign) CGFloat shadowOffsetY;
+@property (nonatomic, strong) UIColor *coverBackgroundColor;
+
 
 /**
  *  defaultConfiguration

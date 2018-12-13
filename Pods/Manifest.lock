@@ -23,7 +23,7 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
-  - FTPopOverMenu (2.0.0)
+  - FTPopOverMenu (2.0.1)
   - IQKeyboardManager (6.2.0)
   - LXMButtonImagePosition (1.2.0)
   - Masonry (1.1.0)
@@ -38,11 +38,12 @@ PODS:
   - "UITableView+FDTemplateLayoutCell (1.6)"
   - Valet (2.4.2)
   - XTColor (1.0.3)
-  - XTFMDB (1.5.3):
+  - XTFMDB (2.0.3):
     - FMDB
     - YYModel
-  - XTlib (1.4.11):
+  - XTlib (1.5.12):
     - CYLTableViewPlaceHolder
+    - FTPopOverMenu
     - Masonry
     - MJRefresh
     - ReactiveObjC
@@ -51,11 +52,12 @@ PODS:
     - SSZipArchive
     - Valet (= 2.4.2)
     - XTColor
-    - XTFMDB
-    - XTlib/base (= 1.4.11)
-    - XTReq
-  - XTlib/Animations (1.4.11):
+    - XTFMDB (> 2.0.0)
+    - XTlib/base (= 1.5.12)
+    - XTReq (> 1.3.0)
+  - XTlib/Animations (1.5.12):
     - CYLTableViewPlaceHolder
+    - FTPopOverMenu
     - Masonry
     - MJRefresh
     - ReactiveObjC
@@ -64,11 +66,12 @@ PODS:
     - SSZipArchive
     - Valet (= 2.4.2)
     - XTColor
-    - XTFMDB
+    - XTFMDB (> 2.0.0)
     - XTlib/base
-    - XTReq
-  - XTlib/base (1.4.11):
+    - XTReq (> 1.3.0)
+  - XTlib/base (1.5.12):
     - CYLTableViewPlaceHolder
+    - FTPopOverMenu
     - Masonry
     - MJRefresh
     - ReactiveObjC
@@ -77,10 +80,11 @@ PODS:
     - SSZipArchive
     - Valet (= 2.4.2)
     - XTColor
-    - XTFMDB
-    - XTReq
-  - XTlib/CustomUIs (1.4.11):
+    - XTFMDB (> 2.0.0)
+    - XTReq (> 1.3.0)
+  - XTlib/CustomUIs (1.5.12):
     - CYLTableViewPlaceHolder
+    - FTPopOverMenu
     - Masonry
     - MJRefresh
     - ReactiveObjC
@@ -89,15 +93,15 @@ PODS:
     - SSZipArchive
     - Valet (= 2.4.2)
     - XTColor
-    - XTFMDB
+    - XTFMDB (> 2.0.0)
     - XTlib/base
-    - XTReq
-  - XTReq (1.2.3):
+    - XTReq (> 1.3.0)
+  - XTReq (1.3.2):
     - AFNetworking
     - SVProgressHUD
-    - XTFMDB
+    - XTFMDB (> 2.0.0)
     - YYModel
-  - Yunpan (0.0.3):
+  - Yunpan (0.0.11):
     - CHTCollectionViewWaterfallLayout
     - DACircularProgress
     - FDFullscreenPopGesture
@@ -112,7 +116,7 @@ PODS:
   - YYModel (1.0.4)
 
 DEPENDENCIES:
-  - Yunpan (from `https://git.shimo.im/xietianchen/Yunpan.git`)
+  - Yunpan (from `../Yunpan/`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -142,12 +146,7 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   Yunpan:
-    :git: https://git.shimo.im/xietianchen/Yunpan.git
-
-CHECKOUT OPTIONS:
-  Yunpan:
-    :commit: c43d6f9f394b40ec98492459c1ae5160b51b2146
-    :git: https://git.shimo.im/xietianchen/Yunpan.git
+    :path: "../Yunpan/"
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -156,7 +155,7 @@ SPEC CHECKSUMS:
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  FTPopOverMenu: 754086f1f3413a948945904c231172d45aa891c5
+  FTPopOverMenu: 7b076d7b3ae615f575c22b7ce85258a56370b99e
   IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
   LXMButtonImagePosition: 663e176be2c7e4ff99bcda808c364ebc3774af0f
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -169,12 +168,12 @@ SPEC CHECKSUMS:
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
   Valet: 14463ef24fab8fd5809044ecedb61484b799fdd6
   XTColor: 77dc1fb053ad58e6821d7de84fabbec361402d94
-  XTFMDB: 13bbb4f16b8596c5834b60131bfc6cae2efa2fba
-  XTlib: 63ad1833708fb1166b7bbd2878a639cd5b00a79b
-  XTReq: 389006ae88e0416a30adf619d8f4241ed3e1217b
-  Yunpan: 43b19f466a09d9d6da955ed8bb1c377b0f7e6426
+  XTFMDB: e90ad2deda58b2b1105002d3d746a19243f7bd41
+  XTlib: d76a46627754afb7455a6d5aabfe5d5cde7ed630
+  XTReq: 7964aec068260ce11c3015d26851ff0f3728fde9
+  Yunpan: 6e94747a7b10f2ef3d2a5a56ffd8d2d71d3331cb
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: dfa39dce5394e3ecda3b4f75430234c14a0cca08
+PODFILE CHECKSUM: c703fd231f1e85fcb67142891e76447a4c2a6dd6
 
 COCOAPODS: 1.5.0

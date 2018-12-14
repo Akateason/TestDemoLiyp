@@ -14,6 +14,19 @@
 #import "SMSHLoginAPIs.h"
 #import "SMSHLoginManager.h"
 #import "SMSHUserInfo.h"
+#import "ChangePwdVC.h"
+#import "ForgetPwdVC.h"
+#import "GeetestUtil.h"
+#import "InputVerifyCodeVC.h"
+#import "IVCTextfield.h"
+#import "SMSHRegistVC.h"
+#import "ShiLoginContainerVC.h"
+#import "SMSHLoginContainerProtocol.h"
+#import "ShimoLoginVC.h"
+#import "ShimoLoginNavVC.h"
+#import "ShimoVerifyLoginVC.h"
+#import "SMLMainVC.h"
+#import "SMLoginRootVC.h"
 
 FOUNDATION_EXPORT double SMSHLoginVersionNumber;
 FOUNDATION_EXPORT const unsigned char SMSHLoginVersionString[];

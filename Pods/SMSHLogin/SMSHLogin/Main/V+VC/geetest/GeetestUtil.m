@@ -8,7 +8,7 @@
 
 #import "GeetestUtil.h"
 #import <GT3Captcha/GT3Captcha.h>
-#import "../../SMSHLoginAPIs.h"
+#import "SMSHLoginAPIs.h"
 #import <YYModel/YYModel.h>
 
 typedef void(^GeetestComplete)(NSDictionary *resultDic);

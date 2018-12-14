@@ -1,6 +1,6 @@
 {
   "name": "Yunpan",
-  "version": "0.0.11",
+  "version": "0.0.20",
   "summary": "iOS shm drive SDK.",
   "homepage": "https://git.shimo.im/xietianchen/Yunpan",
   "license": {
@@ -15,7 +15,7 @@
   },
   "source": {
     "git": "https://git.shimo.im/xietianchen/Yunpan",
-    "tag": "0.0.11"
+    "tag": "0.0.20"
   },
   "source_files": [
     "Yunpan/Model/**/*.{h,m}",
@@ -73,6 +73,15 @@
 
     ],
     "FTPopOverMenu": [
+
+    ],
+    "CYLTableViewPlaceHolder": [
+
+    ],
+    "MGSwipeTableCell": [
+
+    ],
+    "YYWebImage": [
 
     ]
   }

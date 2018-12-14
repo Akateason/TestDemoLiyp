@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "691BFA48962E20E9889A5A2E3C659E5D"
+               BlueprintIdentifier = "E3E1D195054CC23C7203DD6561A3531D"
                BlueprintName = "SMSHLogin"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "SMSHLogin.framework">

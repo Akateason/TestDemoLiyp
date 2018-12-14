@@ -8,12 +8,11 @@ source 'https://git.shimo.im/shanghai/specs_iOS'
 
 target 'TestYunpanSDK' do
 
-use_frameworks!
+    use_frameworks!
 
-
-
-#pod 'Yunpan', :path => '../Yunpan/'
-
+    #pod 'Yunpan', :path => '../Yunpan/'
+    #pod 'SMSHLogin', :path => '../SMSHLogin/'
+      
  pod 'Yunpan'
  pod 'SMSHLogin'
  pod 'XTlib'
@@ -27,5 +26,5 @@ use_frameworks!
     inherit! :search_paths
     # Pods for testing
   end
-
+  
 end

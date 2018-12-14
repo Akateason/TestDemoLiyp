@@ -11,7 +11,7 @@
 #import <BlocksKit/BlocksKit+UIKit.h>
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "IVCTextfield.h"
-#import "../../SMSHLoginAPIs.h"
+#import "SMSHLoginAPIs.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "ChangePwdVC.h"
 

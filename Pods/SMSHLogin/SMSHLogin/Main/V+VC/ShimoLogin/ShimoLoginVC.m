@@ -8,11 +8,12 @@
 
 #import "ShimoLoginVC.h"
 #import <XTBase/XTBase.h>
-#import "../../SMSHLoginAPIs.h"
+#import "SMSHLoginAPIs.h"
 #import <ReactiveObjC/ReactiveObjC.h>
-#import "../ForgetPwd/ForgetPwdVC.h"
+#import "ForgetPwdVC.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <GT3Captcha/GT3Captcha.h>
+#import "SMSHLoginManager.h"
 
 
 @interface ShimoLoginVC ()
@@ -76,6 +77,11 @@
         else {
             NSLog(@"登录失败") ;
         }
+        
+        if ([[SMSHLoginManager sharedInstance].configure respondsToSelector:@selector(userLoginComplete:)]) {
+            [[SMSHLoginManager sharedInstance].configure userLoginComplete:bSuccess] ;
+        }
+
     }] ;
     
 }

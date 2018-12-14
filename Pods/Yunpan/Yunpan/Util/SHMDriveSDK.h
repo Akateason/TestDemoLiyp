@@ -24,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)tokenString ;
 - (BOOL)onOpenFiletoEditor:(NSDictionary *)aFile localPath:(NSString *)path fromCtrller:(UIViewController *)fromCtrller ;
 - (BOOL)hiddenExitButton ;
+- (void)funcInHomeVCDidload:(UIViewController *)listVC ;
 @end
 
 

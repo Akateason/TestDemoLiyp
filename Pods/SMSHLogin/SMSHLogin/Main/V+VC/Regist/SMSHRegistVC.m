@@ -11,6 +11,7 @@
 #import <XTBase/MyWebController.h>
 #import "SMSHLoginAPIs.h"
 #import "InputVerifyCodeVC.h"
+#import "SMSHLoginManager.h"
 
 @interface SMSHRegistVC ()
 
@@ -101,6 +102,10 @@
                 [self dismissViewControllerAnimated:YES completion:^{
                 }] ;
             }
+            
+            if ([[SMSHLoginManager sharedInstance].configure respondsToSelector:@selector(userLoginComplete:)]) {
+                [[SMSHLoginManager sharedInstance].configure userLoginComplete:bSuccess2] ;
+            }
         }];
     }
     else {
@@ -110,6 +115,10 @@
                 [SVProgressHUD showSuccessWithStatus:@"注册成功"] ;
                 [self dismissViewControllerAnimated:YES completion:^{
                 }] ;
+            }
+            
+            if ([[SMSHLoginManager sharedInstance].configure respondsToSelector:@selector(userLoginComplete:)]) {
+                [[SMSHLoginManager sharedInstance].configure userLoginComplete:bSuccess2] ;
             }
         }];
     }

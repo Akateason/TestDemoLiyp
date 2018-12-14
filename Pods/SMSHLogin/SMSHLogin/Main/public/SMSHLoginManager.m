@@ -8,9 +8,10 @@
 
 #import "SMSHLoginManager.h"
 #import <XTReq/XTReq.h>
-#import "V+VC/SMLMainVC.h"
-#import "V+VC/ShimoLoginNavVC.h"
+#import "SMLMainVC.h"
+#import "ShimoLoginNavVC.h"
 #import <SVProgressHUD/SVProgressHUD.h>
+#import "OpenShare+Weixin.h"
 
 @interface SMSHLoginManager ()
 
@@ -44,11 +45,14 @@ XT_SINGLETON_M(SMSHLoginManager)
     [self setup] ;
 }
 
-
 - (void)setup {
     [XTReqSessionManager shareInstance].isDebug = YES ;
     
     [self hudStyle] ;
+    
+    if ([self.configure respondsToSelector:@selector(weixinAppID)] && self.configure.weixinAppID.length) {
+        [OpenShare connectWeixinWithAppId:self.configure.weixinAppID];
+    }
 }
 
 - (void)hudStyle {
@@ -86,11 +90,21 @@ XT_SINGLETON_M(SMSHLoginManager)
 }
 
 - (void)loginMainVCPresentFromCtrller:(UIViewController *)fromCtrller {
+    [fromCtrller presentViewController:[self onlyGetLoginRootNavCtrller] animated:YES completion:nil] ;
+}
+
+- (UINavigationController *)onlyGetLoginRootNavCtrller {
     SMLMainVC *vc = [SMLMainVC getCtrllerFromStory:@"SMSHLogin"
                                             bundle:[NSBundle bundleForClass:self.class]
                               controllerIdentifier:@"SMLMainVC"] ;
     ShimoLoginNavVC *nav = [[ShimoLoginNavVC alloc] initWithRootViewController:vc] ;
-    [fromCtrller presentViewController:nav animated:YES completion:nil] ;
+    return nav ;
+}
+
++ (BOOL)applicationHandleWithUrl:(NSURL *)url {
+    return [OpenShare handleOpenURL:url] ;
 }
 
 @end
+// Yunpan.app/Frameworks/SMSHLogin.framework 1
+// Yunpan.app/Frameworks/SMSHLogin.framework

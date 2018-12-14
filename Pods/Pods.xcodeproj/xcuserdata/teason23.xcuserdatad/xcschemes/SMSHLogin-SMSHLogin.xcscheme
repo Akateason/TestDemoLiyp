@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "661020E8D7CF34577AFB03AF7186BFF0"
+               BlueprintIdentifier = "EA1018EEBF8793BB3B9D8AFF988D5D41"
                BuildableName = "SMSHLogin.bundle"
                BlueprintName = "SMSHLogin-SMSHLogin"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "661020E8D7CF34577AFB03AF7186BFF0"
+            BlueprintIdentifier = "EA1018EEBF8793BB3B9D8AFF988D5D41"
             BuildableName = "SMSHLogin.bundle"
             BlueprintName = "SMSHLogin-SMSHLogin"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -50,16 +50,18 @@ PODS:
   - SDWebImage (4.4.3):
     - SDWebImage/Core (= 4.4.3)
   - SDWebImage/Core (4.4.3)
-  - SMSHLogin (0.0.2):
+  - SMSHLogin (1.0.0):
     - BlocksKit
     - FDFullscreenPopGesture
     - IQKeyboardManager
     - OpenShare
+    - UIFontWDCustomLoader
     - XTBase
     - XTColor
     - XTReq
   - SSZipArchive (2.1.4)
   - SVProgressHUD (2.2.5)
+  - UIFontWDCustomLoader (0.1.0)
   - "UITableView+FDTemplateLayoutCell (1.6)"
   - Valet (2.4.2)
   - XTBase (0.0.11):
@@ -98,7 +100,7 @@ PODS:
     - SVProgressHUD
     - XTFMDB (> 2.0.0)
     - YYModel
-  - Yunpan (0.0.18):
+  - Yunpan (0.0.20):
     - CHTCollectionViewWaterfallLayout
     - CYLTableViewPlaceHolder
     - DACircularProgress
@@ -128,10 +130,6 @@ DEPENDENCIES:
   - Yunpan
 
 SPEC REPOS:
-  https://git.shimo.im/shanghai/specs_iOS:
-    - SMSHLogin
-  https://git.shimo.im/xietianchen/Yunpan_iOS_Spec:
-    - Yunpan
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - BlocksKit
@@ -150,8 +148,10 @@ SPEC REPOS:
     - ReactiveObjC
     - RxWebViewController
     - SDWebImage
+    - SMSHLogin
     - SSZipArchive
     - SVProgressHUD
+    - UIFontWDCustomLoader
     - "UITableView+FDTemplateLayoutCell"
     - Valet
     - XTBase
@@ -159,6 +159,7 @@ SPEC REPOS:
     - XTFMDB
     - XTlib
     - XTReq
+    - Yunpan
     - YYCache
     - YYImage
     - YYModel
@@ -182,9 +183,10 @@ SPEC CHECKSUMS:
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   RxWebViewController: 79bcbf51aff13d93db9779404348b052ab0cd440
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
-  SMSHLogin: ece3afdc74a99203cf0c4bfbf4c6c7ee81a19210
+  SMSHLogin: ee6f6102e71c0ff59d6b10a5779b6ef4e392e64f
   SSZipArchive: 41455d4b8d2b6ab93990820b50dc697c2554a322
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  UIFontWDCustomLoader: 233f0f83e543b8f24a6299d7fc773be9d704fe22
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
   Valet: 14463ef24fab8fd5809044ecedb61484b799fdd6
   XTBase: 39a60d115bb53c98281befee86dbf3c009a53ddd
@@ -192,12 +194,12 @@ SPEC CHECKSUMS:
   XTFMDB: c22446d1eeb347974fb579bd9284c9b48a6d4410
   XTlib: d0a4aaa8dd08a170ac61726575fb3918a444f389
   XTReq: f5added0278758ca358f62a3de30a118f1b6d94a
-  Yunpan: b53b57f175169d0759851ce6d51436ebd49b7b41
+  Yunpan: 872243249225339e7edb696c4b9b955a31940087
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 98e29ad25824adaa5ed1d6b7bcbcf222b84f2694
+PODFILE CHECKSUM: abc5bbe1b60e11876340531b9154e6a5e2431008
 
 COCOAPODS: 1.5.3

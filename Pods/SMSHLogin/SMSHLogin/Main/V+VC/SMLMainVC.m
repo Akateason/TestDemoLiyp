@@ -9,11 +9,13 @@
 #import "SMLMainVC.h"
 #import "SMSHLoginAPIs.h"
 #import "ShimoLogin/ShimoLoginVC.h"
-#import "../SMSHLoginManager.h"
+#import "SMSHLoginManager.h"
 #import "ShimoLoginNavVC.h"
 #import <XTBase/XTBase.h>
 #import "ShiLoginContainerVC.h"
 #import "OpenShare+Weixin.h"
+#import "UIFont+WDCustomLoader.h"
+
 
 @interface SMLMainVC ()
 @property (weak, nonatomic) IBOutlet UIView *customView;
@@ -43,7 +45,21 @@
         lb.textAlignment = NSTextAlignmentCenter;
         lb.textColor = UIColorRGB(65, 70, 75);
         lb.backgroundColor = [UIColor whiteColor];
-        lb.font = [UIFont fontWithName:@"Songti SC" size:APP_WIDTH / 4];
+        
+        // Create an NSURL for your font file: 'Lao MN.ttc'
+        NSURL *laoFontURL = [[NSBundle bundleForClass:self.class] URLForResource:@"Songti" withExtension:@"ttc"];
+        // Do the registration.
+        NSArray *fontPostScriptNames = [UIFont registerFontFromURL:laoFontURL];
+        
+        // If everything went ok, fontPostScriptNames will become @[@"LaoMN",@"LaoMN-Bold"]
+        // and collection will be registered.
+        // (Note: On iOS < 7.0 you will get an empty array)
+        
+        // Then, anywhere in your code, you can do
+        lb.font = [UIFont fontWithName:@"Songti SC" size: APP_WIDTH / 4.f];
+
+//        lb.font = [UIFont fontWithName:@"Songti SC" size: APP_WIDTH / 4.f];
+        
         [self.customView addSubview:lb] ;
         [lb mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.customView) ;

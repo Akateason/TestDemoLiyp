@@ -424,6 +424,12 @@
             if (bSuccess) [self.table xt_loadNewInfoInBackGround:YES] ;
         }] ;
     }] ;
+    
+    
+    
+    if ([[SHMDriveSDK sharedInstance].delegate respondsToSelector:@selector(funcInHomeVCDidload:)]) {
+        [[SHMDriveSDK sharedInstance].delegate funcInHomeVCDidload:self] ;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

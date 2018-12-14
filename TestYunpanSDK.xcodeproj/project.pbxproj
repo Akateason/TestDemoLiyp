@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8FA74B0621C3A316008948C5 /* userPlaceHolder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA74B0521C3A316008948C5 /* userPlaceHolder@2x.png */; };
 		8FC5F30F2178865D009B4042 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5F30E2178865D009B4042 /* AppDelegate.m */; };
 		8FC5F3122178865D009B4042 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5F3112178865D009B4042 /* ViewController.m */; };
 		8FC5F3152178865D009B4042 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FC5F3132178865D009B4042 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		1ABACCE9F1DFA76530256809 /* Pods-TestYunpanSDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestYunpanSDKTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestYunpanSDKTests/Pods-TestYunpanSDKTests.release.xcconfig"; sourceTree = "<group>"; };
 		1D069B2A92ED58242C105D16 /* Pods_TestYunpanSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestYunpanSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		764C034E71AFC3A4F458EE83 /* Pods_TestYunpanSDKUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestYunpanSDKUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FA74B0521C3A316008948C5 /* userPlaceHolder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "userPlaceHolder@2x.png"; sourceTree = "<group>"; };
 		8FC5F30A2178865C009B4042 /* TestYunpanSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestYunpanSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FC5F30D2178865D009B4042 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8FC5F30E2178865D009B4042 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				8FC5F3452178DCD0009B4042 /* Podfile */,
 				8FC5F30D2178865D009B4042 /* AppDelegate.h */,
 				8FC5F30E2178865D009B4042 /* AppDelegate.m */,
+				8FA74B0521C3A316008948C5 /* userPlaceHolder@2x.png */,
 				8FC5F3102178865D009B4042 /* ViewController.h */,
 				8FC5F3112178865D009B4042 /* ViewController.m */,
 				8FC5F3132178865D009B4042 /* Main.storyboard */,
@@ -282,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FA74B0621C3A316008948C5 /* userPlaceHolder@2x.png in Resources */,
 				8FC5F31A2178865F009B4042 /* LaunchScreen.storyboard in Resources */,
 				8FC5F3172178865F009B4042 /* Assets.xcassets in Resources */,
 				8FC5F3462178DCD0009B4042 /* Podfile in Resources */,
@@ -379,6 +383,7 @@
 				"${BUILT_PRODUCTS_DIR}/SMSHLogin/SMSHLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/UIFontWDCustomLoader/UIFontWDCustomLoader.framework",
 				"${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework",
 				"${BUILT_PRODUCTS_DIR}/Valet/Valet.framework",
 				"${BUILT_PRODUCTS_DIR}/XTBase/XTBase.framework",
@@ -416,6 +421,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SMSHLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIFontWDCustomLoader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITableView_FDTemplateLayoutCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Valet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XTBase.framework",

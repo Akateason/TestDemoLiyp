@@ -9,8 +9,9 @@
 #import "ShimoVerifyLoginVC.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 #import <XTBase/XTBase.h>
-#import "../../SMSHLoginAPIs.h"
-#import "../InputVerifyCode/InputVerifyCodeVC.h"
+#import "SMSHLoginAPIs.h"
+#import "InputVerifyCodeVC.h"
+#import "SMSHLoginManager.h"
 
 @interface ShimoVerifyLoginVC ()
 @property (weak, nonatomic) IBOutlet UITextField *tfAccount;
@@ -55,6 +56,11 @@
                                     else {
                                         NSLog(@"登录失败") ;
                                     }
+                                    
+                                    if ([[SMSHLoginManager sharedInstance].configure respondsToSelector:@selector(userLoginComplete:)]) {
+                                        [[SMSHLoginManager sharedInstance].configure userLoginComplete:success] ;
+                                    }
+
                                 }] ;
                                 
                             }] ;
@@ -76,7 +82,7 @@
         self.lbAlert.hidden = YES;
     }];
     
-    self.tfAccount.text = @"15000710541" ;
+//    self.tfAccount.text = @"15000710541" ;
 }
 
 - (BOOL)isValidUsername:(NSString *)username {

@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)isDevEnvironment ;
 - (UIView *)containCustomView ;
 - (NSString *)weixinAppID ; // if nil hide wechat login button
+- (void)userLoginComplete:(BOOL)success ;
 
 @required
 - (NSString *)clientId ;
@@ -31,11 +32,16 @@ XT_SINGLETON_H(SMSHLoginManager)
 @property (weak, nonatomic)     id <SMSHLoginManagerConfigure> configure ;
 @property (copy, nonatomic)     NSString                       *host ;
 @property (strong, nonatomic)   SMSHLocalUser                  *currentUser ;
-@property (nonatomic)           BOOL                           isLogin ;
+@property (nonatomic)           BOOL                           isLogin ; // login state
 
 - (void)doLogout ;
 
 - (void)loginMainVCPresentFromCtrller:(UIViewController *)fromCtrller ;
+
+- (UINavigationController *)onlyGetLoginRootNavCtrller ;
+
++ (BOOL)applicationHandleWithUrl:(NSURL *)url ;
+
 @end
 
 NS_ASSUME_NONNULL_END

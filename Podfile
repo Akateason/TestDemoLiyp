@@ -14,7 +14,7 @@ target 'TestYunpanSDK' do
     #pod 'SMSHLogin', :path => '../SMSHLogin/'
       
  pod 'Yunpan'
- #pod 'SMSHLogin'
+ pod 'SMSHLogin'
  pod 'XTlib'
 
   target 'TestYunpanSDKTests' do

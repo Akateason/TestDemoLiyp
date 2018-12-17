@@ -44,24 +44,13 @@ PODS:
   - Masonry (1.1.0)
   - MGSwipeTableCell (1.6.8)
   - MJRefresh (3.1.15.7)
-  - OpenShare (0.0.1)
   - ReactiveObjC (3.1.0)
   - RxWebViewController (0.0.2)
   - SDWebImage (4.4.3):
     - SDWebImage/Core (= 4.4.3)
   - SDWebImage/Core (4.4.3)
-  - SMSHLogin (1.0.0):
-    - BlocksKit
-    - FDFullscreenPopGesture
-    - IQKeyboardManager
-    - OpenShare
-    - UIFontWDCustomLoader
-    - XTBase
-    - XTColor
-    - XTReq
   - SSZipArchive (2.1.4)
   - SVProgressHUD (2.2.5)
-  - UIFontWDCustomLoader (0.1.0)
   - "UITableView+FDTemplateLayoutCell (1.6)"
   - Valet (2.4.2)
   - XTBase (0.0.11):
@@ -125,7 +114,6 @@ PODS:
     - YYImage
 
 DEPENDENCIES:
-  - SMSHLogin
   - XTlib
   - Yunpan
 
@@ -144,14 +132,11 @@ SPEC REPOS:
     - Masonry
     - MGSwipeTableCell
     - MJRefresh
-    - OpenShare
     - ReactiveObjC
     - RxWebViewController
     - SDWebImage
-    - SMSHLogin
     - SSZipArchive
     - SVProgressHUD
-    - UIFontWDCustomLoader
     - "UITableView+FDTemplateLayoutCell"
     - Valet
     - XTBase
@@ -179,14 +164,11 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MGSwipeTableCell: dc4eca3212ed38a563b27d6aa7b3c01ce656c1e2
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
-  OpenShare: a560580dbb729d5c0c3cc1ee84cd6aa4a07e94c6
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   RxWebViewController: 79bcbf51aff13d93db9779404348b052ab0cd440
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
-  SMSHLogin: ee6f6102e71c0ff59d6b10a5779b6ef4e392e64f
   SSZipArchive: 41455d4b8d2b6ab93990820b50dc697c2554a322
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  UIFontWDCustomLoader: 233f0f83e543b8f24a6299d7fc773be9d704fe22
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
   Valet: 14463ef24fab8fd5809044ecedb61484b799fdd6
   XTBase: 39a60d115bb53c98281befee86dbf3c009a53ddd
@@ -200,6 +182,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: abc5bbe1b60e11876340531b9154e6a5e2431008
+PODFILE CHECKSUM: 4b1f2ab6ba18fad972122e97315e0bb5760be041
 
 COCOAPODS: 1.5.3

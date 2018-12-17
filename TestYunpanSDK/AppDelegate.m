@@ -10,6 +10,7 @@
 #import <Yunpan/SHMDriveSDK.h>
 #import <SMSHLogin/SMSHLoginManager.h>
 #import <XTBase/XTBase.h>
+#import <Yunpan/ListVC.h>
 
 @interface AppDelegate () <SHMDriveSDKDelegate,SMSHLoginManagerConfigure>
 
@@ -75,20 +76,25 @@
     
     UIButton *cusBt = [UIButton new] ;
     [cusBt setImage:[UIImage imageNamed:@"userPlaceHolder"] forState:0] ;
-    [cusBt addTarget:self action:@selector(tapLogin) forControlEvents:UIControlEventTouchUpInside];
+    [[cusBt rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        [self tapLogin:(ListVC *)listVC] ;
+    }] ;
+    
     
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:cusBt];
     listVC.navigationItem.leftBarButtonItem = item;
 }
 
-- (void)tapLogin {
+- (void)tapLogin:(ListVC *)listVC {
     if (![SMSHLoginManager sharedInstance].isLogin) {
         [[SMSHLoginManager sharedInstance] loginMainVCPresentFromCtrller:[UIViewController xt_topViewController]] ;
     }
     else {
         [UIAlertController xt_showAlertCntrollerWithAlertControllerStyle:(UIAlertControllerStyleAlert) title:@"" message:@"退出登录?" cancelButtonTitle:@"否" destructiveButtonTitle:@"是的" otherButtonTitles:nil callBackBlock:^(NSInteger btnIndex) {
+            
             if (btnIndex == 1) {
                 [[SMSHLoginManager sharedInstance] doLogout] ;
+                [listVC.table xt_loadNewInfoInBackGround:NO] ;
             }
         }] ;
     }

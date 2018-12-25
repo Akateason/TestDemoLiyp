@@ -14,7 +14,7 @@
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <GT3Captcha/GT3Captcha.h>
 #import "SMSHLoginManager.h"
-
+#import "SMLoginAnimation.h"
 
 @interface ShimoLoginVC ()
 @property (weak, nonatomic) IBOutlet UITextField *tfAccount;
@@ -25,6 +25,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbAlert;
 @property (weak, nonatomic) IBOutlet UIButton *btForgetpwd;
 @property (weak, nonatomic) IBOutlet UIView *sep;
+@property (weak, nonatomic) IBOutlet BarUnderLoginTextInputLine *line1;
+@property (weak, nonatomic) IBOutlet BarUnderLoginTextInputLine *line2;
 
 // vm
 @property (copy, nonatomic) NSString *vmEmail ;
@@ -64,26 +66,30 @@
     
     if (!valided) return ;
     
-    @weakify(self)
-    [SMSHLoginAPIs getOauthTokenWithMobile:self.vmMobile mail:self.vmEmail password:self.tfPassword.text code:nil mobileVerifyCode:nil geetestDic:nil complete:^(BOOL bSuccess, id  _Nonnull json) {
-     
-        @strongify(self)
-        if (bSuccess) {
-            NSLog(@"登录成功") ;
-            [SVProgressHUD showSuccessWithStatus:@"登录成功"] ;
-            [self.delegate.outsideCtrller dismissViewControllerAnimated:YES completion:^{
-            }] ;
-        }
-        else {
-            NSLog(@"登录失败") ;
-        }
-        
-        if ([[SMSHLoginManager sharedInstance].configure respondsToSelector:@selector(userLoginComplete:)]) {
-            [[SMSHLoginManager sharedInstance].configure userLoginComplete:bSuccess] ;
-        }
-
-    }] ;
     
+    [SMLoginAnimation zoomAndFade:sender complete:^{
+        
+        @weakify(self)
+        [SMSHLoginAPIs getOauthTokenWithMobile:self.vmMobile mail:self.vmEmail password:self.tfPassword.text code:nil mobileVerifyCode:nil geetestDic:nil complete:^(BOOL bSuccess, id  _Nonnull json) {
+            
+            @strongify(self)
+            if (bSuccess) {
+                NSLog(@"登录成功") ;
+                [SVProgressHUD showSuccessWithStatus:@"登录成功"] ;
+                [self.delegate.outsideCtrller dismissViewControllerAnimated:YES completion:^{
+                }] ;
+            }
+            else {
+                NSLog(@"登录失败") ;
+            }
+            
+            if ([[SMSHLoginManager sharedInstance].configure respondsToSelector:@selector(userLoginComplete:)]) {
+                [[SMSHLoginManager sharedInstance].configure userLoginComplete:bSuccess] ;
+            }
+            
+        }] ;
+        
+    }] ;
 }
 
 - (IBAction)forgetPwd:(id)sender {
@@ -127,6 +133,45 @@
         self.btLogin.backgroundColor = [signupActive boolValue] ? UIColorRGB(65, 70, 75) : UIColorRGBA(65, 70, 75,.35) ;
         self.lbAlert.hidden = YES;
     }] ;
+    
+    
+    //
+    [[[[NSNotificationCenter defaultCenter]
+       rac_addObserverForName:UIKeyboardWillShowNotification object:nil]
+       takeUntil:self.rac_willDeallocSignal]
+     subscribeNext:^(NSNotification *notification) {
+         
+         @strongify(self)
+         if ([self.tfAccount isFirstResponder]) {
+             [self.line1 startMove] ;
+             [self.line2 resetMove] ;
+         }
+         if ([self.tfPassword isFirstResponder]) {
+             [self.line2 startMove] ;
+             [self.line1 resetMove] ;
+         }
+         
+     }];
+
+    [[[[NSNotificationCenter defaultCenter]
+       rac_addObserverForName:UIKeyboardWillHideNotification object:nil]
+      takeUntil:self.rac_willDeallocSignal]
+     subscribeNext:^(NSNotification *notification) {
+         
+         @strongify(self)
+         if ([self.tfAccount isFirstResponder]) {
+             [self.line1 resetMove] ;
+         }
+         if ([self.tfPassword isFirstResponder]) {
+             [self.line2 resetMove] ;
+         }
+     }];
+    
+    
+    [[self.tfPassword rac_signalForControlEvents:UIControlEventEditingDidEndOnExit] subscribeNext:^(id x) {
+        @strongify(self)
+        [self loginOnClick:nil] ;
+    }];
     
 //    _tfAccount.text = @"chenxia002@shimo.im" ;
 //    _tfPassword.text = @"123123" ;

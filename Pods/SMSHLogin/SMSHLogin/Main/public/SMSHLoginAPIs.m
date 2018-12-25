@@ -60,15 +60,17 @@
     NSMutableDictionary *header = [self defaultHeader] ;
     if (geetestDic!=nil) for (NSString *key in geetestDic) [header setObject:geetestDic[key] forKey:key] ;
     
-    
+    @weakify(self)
     [XTRequest reqWithUrl:[self UrlAppend:@"/action/send_verification_code"] mode:XTRequestMode_POST_MODE header:header parameters:nil rawBody:[body yy_modelToJSONString] hud:NO completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
-        
+     
+        @strongify(self)
         if (error) {
             NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
             if (httpResponse.statusCode == 429) {
                 [[GeetestUtil sharedInstance] startGTViewBlkComplete:^(NSDictionary * _Nonnull resultDic) {
                     [self sendVerificationCodeWithType:type mobile:mobile scenes:scenes geetestDic:resultDic complete:completion] ;
                 }];
+                completion(NO) ;
                 return ;
             }
             
@@ -98,15 +100,18 @@
                             @"scenes":scence} ;
     NSMutableDictionary *header = [self defaultHeader] ;
     if (geetestDic!=nil) for (NSString *key in geetestDic) [header setObject:geetestDic[key] forKey:key] ;
-
+    
+    @weakify(self)
     [XTRequest reqWithUrl:[self UrlAppend:@"/action/send_email_code"] mode:XTRequestMode_POST_MODE header:header parameters:nil rawBody:[param yy_modelToJSONString] hud:NO completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
         
+        @strongify(self)
         if (error) {
             NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
             if (httpResponse.statusCode == 429) {
                 [[GeetestUtil sharedInstance] startGTViewBlkComplete:^(NSDictionary * _Nonnull resultDic) {
-                    [self sendEmailCodeWithEmail:email scences:scence geetestDic:geetestDic complete:completion] ;
+                    [self sendEmailCodeWithEmail:email scences:scence geetestDic:resultDic complete:completion] ;
                 }];
+                completion(NO) ;
                 return ;
             }
             
@@ -175,8 +180,9 @@
             NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
             if (httpResponse.statusCode == 429) {
                 [[GeetestUtil sharedInstance] startGTViewBlkComplete:^(NSDictionary * _Nonnull resultDic) {
-                    [self registUserName:name email:email orMobile:mobile mobileVerifyCode:mobileVerifyCode password:password avatar:avatar parentId:parentId ref:ref referer:referer inviter:inviter geetestDic:geetestDic complete:completion];
+                    [self registUserName:name email:email orMobile:mobile mobileVerifyCode:mobileVerifyCode password:password avatar:avatar parentId:parentId ref:ref referer:referer inviter:inviter geetestDic:resultDic complete:completion];
                 }];
+                completion(NO) ;
                 return ;
             }
             
@@ -406,8 +412,9 @@
             NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
             if (httpResponse.statusCode == 429) {
                 [[GeetestUtil sharedInstance] startGTViewBlkComplete:^(NSDictionary * _Nonnull resultDic) {
-                    [self getOauthTokenWithMobile:mobile mail:mail password:password code:code mobileVerifyCode:mobileVerifyCode geetestDic:geetestDic complete:completion];
+                    [self getOauthTokenWithMobile:mobile mail:mail password:password code:code mobileVerifyCode:mobileVerifyCode geetestDic:resultDic complete:completion];
                 }];
+                completion(NO, nil) ;
                 return ;
             }
             
@@ -523,8 +530,9 @@
                 NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
                 if (httpResponse.statusCode == 429) {
                     [[GeetestUtil sharedInstance] startGTViewBlkComplete:^(NSDictionary * _Nonnull resultDic) {
-                        [self verifyPassword:pwd geetestDic:geetestDic complete:completion] ;
+                        [self verifyPassword:pwd geetestDic:resultDic complete:completion] ;
                     }];
+                    completion(NO) ;
                     return ;
                 }
                 

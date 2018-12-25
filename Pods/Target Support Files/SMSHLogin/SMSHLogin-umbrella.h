@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "SMLoginAnimation.h"
 #import "SMSHLocalUser.h"
 #import "SMSHLoginAPIs.h"
 #import "SMSHLoginManager.h"

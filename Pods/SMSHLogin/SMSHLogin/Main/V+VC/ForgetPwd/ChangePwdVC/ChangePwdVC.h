@@ -7,6 +7,7 @@
 //
 
 #import "SMLoginRootVC.h"
+#import "SMLoginAnimation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -21,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *btConfirm;
 @property (weak, nonatomic) IBOutlet UIView *sep1;
 @property (weak, nonatomic) IBOutlet UIView *sep2;
+@property (weak, nonatomic) IBOutlet BarUnderLoginTextInputLine *line1;
+@property (weak, nonatomic) IBOutlet BarUnderLoginTextInputLine *line2;
 
 @property (strong, nonatomic) NSString *account ;
 @property (strong, nonatomic) NSString *verifyCode ;

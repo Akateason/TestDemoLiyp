@@ -15,7 +15,8 @@
 #import "ShiLoginContainerVC.h"
 #import "OpenShare+Weixin.h"
 #import "UIFont+WDCustomLoader.h"
-
+#import "SMLoginAnimation.h"
+#import <XTlib/XTAnimation.h>
 
 @interface SMLMainVC ()
 @property (weak, nonatomic) IBOutlet UIView *customView;
@@ -29,8 +30,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.customView.backgroundColor = [UIColor whiteColor] ;
     [self.btWechat xt_setImagePosition:XTBtImagePositionLeft spacing:6] ;
+    
     
     if ( ([SMSHLoginManager sharedInstance].configure != nil) && [[SMSHLoginManager sharedInstance].configure respondsToSelector:@selector(containCustomView)] ){
         UIView *placehold = [SMSHLoginManager sharedInstance].configure.containCustomView ;
@@ -39,7 +41,8 @@
             make.edges.equalTo(self.customView) ;
         }] ;
     }
-    else { // default container view
+    else {
+        // default container view
         UILabel *lb = [UILabel new];
         lb.text = @"石墨";
         lb.textAlignment = NSTextAlignmentCenter;
@@ -49,7 +52,7 @@
         // Create an NSURL for your font file: 'Lao MN.ttc'
         NSURL *laoFontURL = [[NSBundle bundleForClass:self.class] URLForResource:@"Songti" withExtension:@"ttc"];
         // Do the registration.
-        NSArray *fontPostScriptNames = [UIFont registerFontFromURL:laoFontURL];
+        [UIFont registerFontFromURL:laoFontURL];
         
         // If everything went ok, fontPostScriptNames will become @[@"LaoMN",@"LaoMN-Bold"]
         // and collection will be registered.
@@ -66,10 +69,30 @@
         }] ;
     }
     
+    [self.customView setNeedsLayout] ;
+    [self.customView layoutIfNeeded] ;
     
     if ( ![[SMSHLoginManager sharedInstance].configure respondsToSelector:@selector(weixinAppID)] || ![SMSHLoginManager sharedInstance].configure.weixinAppID.length ) {
         self.btWechat.hidden = YES ;
     }
+    
+
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated] ;
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated] ;
+    
+    CATransition *animation = [CATransition animation];
+    [animation setDuration:3];
+    [animation setFillMode:kCAFillModeForwards];
+    [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+    [animation setType:@"rippleEffect"];
+    [self.customView.layer addAnimation:animation forKey:nil];
 }
 
 - (IBAction)wechatlogin:(id)sender {
@@ -81,8 +104,13 @@
 }
 
 - (IBAction)shimologin:(id)sender {
-    ShiLoginContainerVC *vc = [[ShiLoginContainerVC alloc] init] ;
-    [self.navigationController pushViewController:vc animated:YES] ;
+    
+    [SMLoginAnimation zoomAndFade:sender complete:^{
+        
+        ShiLoginContainerVC *vc = [[ShiLoginContainerVC alloc] init] ;
+        [self.navigationController pushViewController:vc animated:YES] ;
+        
+    }] ;
 }
 
 @end

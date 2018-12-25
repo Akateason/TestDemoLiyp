@@ -28,7 +28,7 @@
     [[UINavigationBar appearance] setTintColor:[UIColor blackColor]] ;
     [[UINavigationBar appearance] setBackgroundColor:[UIColor whiteColor]] ;
 
-    [SHMDriveSDK sharedInstance].isDevEnviroment = YES ;
+    [SHMDriveSDK sharedInstance].isDevEnviroment = NO ;
     [SHMDriveSDK sharedInstance].isDebug = YES ;
     [SHMDriveSDK sharedInstance].delegate = self ;
 

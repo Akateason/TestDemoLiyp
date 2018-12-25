@@ -11,11 +11,14 @@
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "InputVerifyCodeVC.h"
 #import "ChangePwdVC.h"
+#import "SMLoginAnimation.h"
+
 
 @interface ForgetPwdVC ()
 @property (weak, nonatomic) IBOutlet UITextField *tfAccount;
 @property (weak, nonatomic) IBOutlet UIButton *btResetpwd;
 @property (weak, nonatomic) IBOutlet UILabel *lbAlert;
+@property (weak, nonatomic) IBOutlet BarUnderLoginTextInputLine *line1;
 
 @end
 
@@ -28,6 +31,12 @@
 }
 
 - (IBAction)btResetpwdOnClick:(id)sender {
+    [SMLoginAnimation zoomAndFade:sender complete:^{
+        [self actionBbtResetpwdOnClick] ;
+    }] ;
+}
+
+- (void)actionBbtResetpwdOnClick {
     [_tfAccount resignFirstResponder] ;
     
     _lbAlert.hidden = YES ;
@@ -81,6 +90,38 @@
         self.btResetpwd.backgroundColor = valid ? UIColorRGB(65, 70, 75) : UIColorRGBA(65, 70, 75,.35) ;
         self.lbAlert.hidden = YES;
     }];
+    
+    
+    //
+    @weakify(self)
+    [[[[NSNotificationCenter defaultCenter]
+       rac_addObserverForName:UIKeyboardWillShowNotification object:nil]
+      takeUntil:self.rac_willDeallocSignal]
+     subscribeNext:^(NSNotification *notification) {
+         
+         @strongify(self)
+         if ([self.tfAccount isFirstResponder]) {
+             [self.line1 startMove] ;
+         }
+         
+     }];
+    
+    [[[[NSNotificationCenter defaultCenter]
+       rac_addObserverForName:UIKeyboardWillHideNotification object:nil]
+      takeUntil:self.rac_willDeallocSignal]
+     subscribeNext:^(NSNotification *notification) {
+         
+         @strongify(self)
+         if ([self.tfAccount isFirstResponder]) {
+             [self.line1 resetMove] ;
+         }
+     }];
+    
+    [[self.tfAccount rac_signalForControlEvents:UIControlEventEditingDidEndOnExit] subscribeNext:^(id x) {
+        @strongify(self)
+        [self btResetpwdOnClick:nil] ;
+    }];
+
 }
 
 - (BOOL)isValidUsername:(NSString *)username {

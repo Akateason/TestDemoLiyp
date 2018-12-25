@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <RxWebViewController/RxWebViewNavigationViewController.h>
+//#import <RxWebViewController/RxWebViewNavigationViewController.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ShimoLoginNavVC : RxWebViewNavigationViewController
+@interface ShimoLoginNavVC : UINavigationController //RxWebViewNavigationViewController
 
 @end
 

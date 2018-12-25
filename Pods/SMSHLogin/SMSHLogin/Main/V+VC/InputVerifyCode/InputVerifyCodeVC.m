@@ -14,7 +14,8 @@
 #import "SMSHLoginAPIs.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "ChangePwdVC.h"
-
+#import "SMLoginAnimation.h"
+#import "GeetestUtil.h"
 
 @interface InputVerifyCodeVC () <IVCTextFieldDelegate>
 @property (copy, nonatomic)     NSString *mobile ;
@@ -27,7 +28,6 @@
 @property (copy, nonatomic)     VerifyCodeCompletion blkVerifyCodeCompletion ;
 
 @property (strong, nonatomic)   IVCTextfield *tfFake ;
-@property (nonatomic)           BOOL isfirsttime ;
 
 @end
 
@@ -39,17 +39,21 @@
 
 - (IBAction)btReSendOnClick:(id)sender {
     // send verify code
-    WEAK_SELF
-    if (self.mobile.length) {
-        [SMSHLoginAPIs sendVerificationCodeWithType:@"sms" mobile:self.mobile scenes:[self stringOfScence] geetestDic:nil complete:^(BOOL bSuccess) {
-            if (bSuccess) [weakSelf countdownTheBUtton] ;
-        }] ;
-    }
-    else if (self.email.length) {
-        [SMSHLoginAPIs sendEmailCodeWithEmail:self.email scences:[self stringOfScence] geetestDic:nil complete:^(BOOL bSuccess) {
-            if (bSuccess) [weakSelf countdownTheBUtton] ;
-        }];
-    }
+    [SMLoginAnimation zoomAndFade:sender complete:^{
+        
+        WEAK_SELF
+        if (self.mobile.length) {
+            [SMSHLoginAPIs sendVerificationCodeWithType:@"sms" mobile:self.mobile scenes:[self stringOfScence] geetestDic:nil complete:^(BOOL bSuccess) {
+                if (bSuccess) [weakSelf countdownTheBUtton] ;
+            }] ;
+        }
+        else if (self.email.length) {
+            [SMSHLoginAPIs sendEmailCodeWithEmail:self.email scences:[self stringOfScence] geetestDic:nil complete:^(BOOL bSuccess) {
+                if (bSuccess) [weakSelf countdownTheBUtton] ;
+            }];
+        }
+        
+    }] ;
 }
 
 + (void)showFromCtrller:(UIViewController *)ctrller
@@ -59,21 +63,47 @@
              completion:(VerifyCodeCompletion)completion {
     
     InputVerifyCodeVC *vc = [InputVerifyCodeVC getCtrllerFromStory:@"SMSHLogin" bundle:[NSBundle bundleForClass:self.class] controllerIdentifier:@"InputVerifyCodeVC"];
+    vc.scenceType = scenctType ;
+    
+    @weakify(self)
+    if (mobile.length) {
+        [SMSHLoginAPIs sendVerificationCodeWithType:@"sms" mobile:mobile scenes:[vc stringOfScence] geetestDic:nil complete:^(BOOL bSuccess) {
+            @strongify(self)
+            if (bSuccess) {
+                [self mergeJumpFunc:vc from:ctrller mobile:mobile email:email scenceType:scenctType completion:completion] ;
+            }
+        }] ;
+    }
+    else if (email.length) {
+        
+        [SMSHLoginAPIs sendEmailCodeWithEmail:email scences:[vc stringOfScence] geetestDic:nil complete:^(BOOL bSuccess) {
+            @strongify(self)
+            if (bSuccess) {
+                [self mergeJumpFunc:vc from:ctrller mobile:mobile email:email scenceType:scenctType completion:completion] ;
+            }
+        }];
+    }
+}
+
++ (void)mergeJumpFunc:(InputVerifyCodeVC *)vc
+                 from:(UIViewController *)ctrller
+               mobile:(NSString *)mobile
+                email:(NSString *)email
+           scenceType:(InputVerifyCodeVCType)scenctType
+           completion:(VerifyCodeCompletion)completion {
+    
     vc.mobile = mobile;
     vc.email = email;
     vc.scenceType = scenctType;
     vc.blkVerifyCodeCompletion = completion;
     [ctrller.navigationController pushViewController:vc animated:YES];
-    
-    if (mobile.length) {
-        [SMSHLoginAPIs sendVerificationCodeWithType:@"sms" mobile:mobile scenes:[vc stringOfScence] geetestDic:nil complete:^(BOOL bSuccess) {}] ;
-    }
-    else if (email.length) {
-        [SMSHLoginAPIs sendEmailCodeWithEmail:email scences:[vc stringOfScence] geetestDic:nil complete:^(BOOL bSuccess) {}];
-    }
 }
 
+
+
+
 #pragma mark - life
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -151,15 +181,18 @@
     
     //
     [self countdownTheBUtton] ;
+    
+    //
+//    [[[[[NSNotificationCenter defaultCenter] rac_addObserverForName:kNotificationNameGeetestDidSuccess object:nil] takeUntil:self.rac_willDeallocSignal] deliverOnMainThread] subscribeNext:^(NSNotification * _Nullable x) {
+//        @strongify(self)
+//        [self.tfFake becomeFirstResponder] ;
+//    }] ;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated] ;
     
-    if (!_isfirsttime) {
-        [self.tfFake becomeFirstResponder] ;
-        _isfirsttime = YES ;
-    }
+    [self.tfFake becomeFirstResponder] ;
 }
 
 - (void)countdownTheBUtton {
@@ -235,6 +268,5 @@
 - (NSString *)stringOfScence {
     return kARRAY_InputVerifyCodeVCType[self.scenceType] ;
 }
-
 
 @end

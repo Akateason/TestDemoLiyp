@@ -69,13 +69,13 @@ XT_SINGLETON_M(GeetestUtil)
                                  @"X-Geetest-Validate":result[@"geetest_validate"],
                                  @"X-Geetest-Seccode":result[@"geetest_seccode"]};
         self.blkGtComplete(header);
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationNameGeetestDidSuccess object:nil];
     }
 }
 
 - (void)gtCaptcha:(GT3CaptchaManager *)manager didReceiveSecondaryCaptchaData:(NSData *)data response:(NSURLResponse *)response error:(GT3Error *)error decisionHandler:(void (^)(GT3SecondaryCaptchaPolicy))decisionHandler {
     
 }
-
-
 
 @end

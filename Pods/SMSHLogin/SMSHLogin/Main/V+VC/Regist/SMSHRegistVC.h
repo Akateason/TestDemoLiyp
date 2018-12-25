@@ -7,6 +7,7 @@
 //
 
 #import "SMLoginRootVC.h"
+#import "SMLoginAnimation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -30,6 +31,8 @@ typedef enum : NSUInteger {
 
 @property (weak, nonatomic) IBOutlet UIButton *btSwithRegistWay;
 @property (weak, nonatomic) IBOutlet UIButton *btSendCode;
+@property (weak, nonatomic) IBOutlet BarUnderLoginTextInputLine *line1;
+@property (weak, nonatomic) IBOutlet BarUnderLoginTextInputLine *line2;
 
 // vm
 @property (nonatomic) SMSHRegistType vType ;

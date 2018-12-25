@@ -19,6 +19,7 @@
             <connections>
                 <outlet property="btSendCode" destination="4u1-T6-O3m" id="EW8-ig-WB4"/>
                 <outlet property="lbAlert" destination="1fc-j4-xZa" id="x7b-Q5-VGG"/>
+                <outlet property="line1" destination="bsu-6G-osr" id="0Yr-3R-TCT"/>
                 <outlet property="tfAccount" destination="yI5-GJ-PCd" id="vA2-Kx-br2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -49,7 +50,7 @@
                     <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
                     <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                 </textField>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsu-6G-osr">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsu-6G-osr" customClass="BarUnderLoginTextInputLine">
                     <rect key="frame" x="24" y="229" width="327" height="2"/>
                     <color key="backgroundColor" red="0.25485819580000002" green="0.27448078990000002" blue="0.29404795169999998" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -135,7 +136,7 @@
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="39.200000000000003" y="46.326836581709152"/>
+            <point key="canvasLocation" x="-122" y="-6"/>
         </view>
     </objects>
 </document>

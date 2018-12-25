@@ -156,7 +156,7 @@
                                 <color key="textColor" red="0.25485819580000002" green="0.27448078990000002" blue="0.29404795169999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tb4-Bd-VIF">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tb4-Bd-VIF" customClass="BarUnderLoginTextInputLine">
                                 <rect key="frame" x="24" y="229.5" width="327" height="2"/>
                                 <color key="backgroundColor" red="0.25485819580000002" green="0.27448078990000002" blue="0.29404795169999998" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -223,6 +223,7 @@
                     <connections>
                         <outlet property="btResetpwd" destination="qm6-fa-54t" id="44W-HV-TLm"/>
                         <outlet property="lbAlert" destination="pVR-8K-nZ8" id="JRr-Gh-j2f"/>
+                        <outlet property="line1" destination="tb4-Bd-VIF" id="HFn-FK-tsI"/>
                         <outlet property="tfAccount" destination="Ian-YD-jfV" id="owy-sW-eku"/>
                     </connections>
                 </viewController>
@@ -256,7 +257,7 @@
                                 <color key="textColor" red="0.45112746949999999" green="0.63476520780000001" blue="0.88979804520000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xH1-Zy-lTt">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xH1-Zy-lTt" customClass="BarUnderLoginTextInputLine">
                                 <rect key="frame" x="24" y="230" width="327" height="2"/>
                                 <color key="backgroundColor" red="0.25485819580000002" green="0.27448078990000002" blue="0.29404795169999998" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -297,7 +298,7 @@
                                 <color key="textColor" red="0.25485819580000002" green="0.27448078990000002" blue="0.29404795169999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="413-uW-kNh">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="413-uW-kNh" customClass="BarUnderLoginTextInputLine">
                                 <rect key="frame" x="24" y="316.5" width="327" height="2"/>
                                 <color key="backgroundColor" red="0.25485819580000002" green="0.27448078990000002" blue="0.29404795169999998" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -422,6 +423,8 @@
                         <outlet property="lbAccount" destination="HVV-oT-PR5" id="Fbv-7P-e9C"/>
                         <outlet property="lbAlert1" destination="fjI-zA-vZy" id="eN0-oS-xPD"/>
                         <outlet property="lbAlert2" destination="qvM-NO-swN" id="JEp-or-wFq"/>
+                        <outlet property="line1" destination="xH1-Zy-lTt" id="1jL-n8-Qhb"/>
+                        <outlet property="line2" destination="413-uW-kNh" id="iyT-nN-DQs"/>
                         <outlet property="sep1" destination="xX9-y1-Fqg" id="WLy-6H-pYo"/>
                         <outlet property="sep2" destination="vbY-4c-pAg" id="zRi-CC-K6m"/>
                         <outlet property="tfpw1" destination="LU1-NY-jlQ" id="hvm-Xj-RCN"/>
@@ -460,7 +463,7 @@
                                 <color key="textColor" red="0.91495835780000001" green="0.33410280939999998" blue="0.33362057810000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zne-eD-c5x">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zne-eD-c5x" customClass="BarUnderLoginTextInputLine">
                                 <rect key="frame" x="24" y="315.5" width="327" height="2"/>
                                 <color key="backgroundColor" red="0.25485819580000002" green="0.27448078990000002" blue="0.29404795169999998" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -508,7 +511,7 @@
                                 <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ruE-dk-Trn">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ruE-dk-Trn" customClass="BarUnderLoginTextInputLine">
                                 <rect key="frame" x="24" y="229" width="327" height="2"/>
                                 <color key="backgroundColor" red="0.25485819580000002" green="0.27448078990000002" blue="0.29404795169999998" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -631,6 +634,8 @@
                         <outlet property="lbServeLawty" destination="K9D-gI-WHT" id="GDC-R7-ZSX"/>
                         <outlet property="lbTitleOfAccount" destination="Hct-67-Uf0" id="kcX-UR-aNu"/>
                         <outlet property="leftFlexOfTfAccount" destination="UOW-XM-DSp" id="y3K-qF-O5G"/>
+                        <outlet property="line1" destination="ruE-dk-Trn" id="Brk-fZ-idf"/>
+                        <outlet property="line2" destination="Zne-eD-c5x" id="ov5-ml-c55"/>
                         <outlet property="tfAccount" destination="V1b-wR-rnM" id="qtY-g2-drG"/>
                         <outlet property="tfPassword" destination="CsG-F6-ZbK" id="Nip-Pj-Wiq"/>
                     </connections>
@@ -864,6 +869,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o3p-yX-Bzz" customClass="ShimoLoginNavVC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jKm-b8-IpO">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

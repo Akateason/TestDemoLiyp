@@ -50,7 +50,7 @@ PODS:
   - SDWebImage (4.4.3):
     - SDWebImage/Core (= 4.4.3)
   - SDWebImage/Core (4.4.3)
-  - SMSHLogin (1.0.0):
+  - SMSHLogin (1.0.5):
     - BlocksKit
     - FDFullscreenPopGesture
     - IQKeyboardManager
@@ -58,13 +58,14 @@ PODS:
     - UIFontWDCustomLoader
     - XTBase
     - XTColor
+    - XTlib/Animations
     - XTReq
   - SSZipArchive (2.1.4)
   - SVProgressHUD (2.2.5)
   - UIFontWDCustomLoader (0.1.0)
   - "UITableView+FDTemplateLayoutCell (1.6)"
   - Valet (2.4.2)
-  - XTBase (0.0.11):
+  - XTBase (0.0.12):
     - CYLTableViewPlaceHolder
     - FTPopOverMenu
     - Masonry
@@ -183,13 +184,13 @@ SPEC CHECKSUMS:
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   RxWebViewController: 79bcbf51aff13d93db9779404348b052ab0cd440
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
-  SMSHLogin: ee6f6102e71c0ff59d6b10a5779b6ef4e392e64f
+  SMSHLogin: a8689381de3a383a069ee07ae5198cf7aba8ad58
   SSZipArchive: 41455d4b8d2b6ab93990820b50dc697c2554a322
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   UIFontWDCustomLoader: 233f0f83e543b8f24a6299d7fc773be9d704fe22
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
   Valet: 14463ef24fab8fd5809044ecedb61484b799fdd6
-  XTBase: 39a60d115bb53c98281befee86dbf3c009a53ddd
+  XTBase: fb0095fce892c61334e54c3c893370f820059bbd
   XTColor: 77dc1fb053ad58e6821d7de84fabbec361402d94
   XTFMDB: c22446d1eeb347974fb579bd9284c9b48a6d4410
   XTlib: d0a4aaa8dd08a170ac61726575fb3918a444f389

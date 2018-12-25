@@ -9,7 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <XTBase/XTBase.h>
 
+
 NS_ASSUME_NONNULL_BEGIN
+
+static NSString * const kNotificationNameGeetestDidSuccess = @"kNotificationNameGeetestDidSuccess" ;
 
 @interface GeetestUtil : NSObject
 XT_SINGLETON_H(GeetestUtil)

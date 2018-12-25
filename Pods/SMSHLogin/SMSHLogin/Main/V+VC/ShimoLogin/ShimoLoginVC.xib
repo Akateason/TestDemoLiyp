@@ -22,6 +22,8 @@
                 <outlet property="btLogin" destination="Tk7-dl-8fV" id="hbf-y4-Gzz"/>
                 <outlet property="btShowPwd" destination="si9-Up-13u" id="IMY-NA-bAn"/>
                 <outlet property="lbAlert" destination="1Cd-A6-YzZ" id="fmR-y0-3D8"/>
+                <outlet property="line1" destination="22k-Rr-zVC" id="W7B-ao-GFG"/>
+                <outlet property="line2" destination="LQU-VN-hfC" id="W6X-wj-OiX"/>
                 <outlet property="sep" destination="HCR-xb-ayK" id="wu2-bp-9qd"/>
                 <outlet property="tfAccount" destination="NFd-Y1-vjG" id="Svz-Rq-18m"/>
                 <outlet property="tfPassword" destination="92o-rZ-CEp" id="WT1-dw-oio"/>
@@ -54,7 +56,7 @@
                     <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
                     <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                 </textField>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="22k-Rr-zVC">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="22k-Rr-zVC" customClass="BarUnderLoginTextInputLine">
                     <rect key="frame" x="24" y="229" width="327" height="2"/>
                     <color key="backgroundColor" red="0.25485819578170776" green="0.27448078989982605" blue="0.29404795169830322" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -76,7 +78,7 @@
                     <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LQU-VN-hfC">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LQU-VN-hfC" customClass="BarUnderLoginTextInputLine">
                     <rect key="frame" x="24" y="315.5" width="327" height="2"/>
                     <color key="backgroundColor" red="0.25485819580000002" green="0.27448078990000002" blue="0.29404795169999998" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>

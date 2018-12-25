@@ -13,6 +13,7 @@
 #import "InputVerifyCodeVC.h"
 #import "SMSHLoginManager.h"
 
+
 @interface SMSHRegistVC ()
 
 @end
@@ -34,6 +35,12 @@
 }
 
 - (IBAction)sendVerifyCodeOnClick:(id)sender {
+    [SMLoginAnimation zoomAndFade:sender complete:^{
+        [self actionBtOnCLick] ;
+    }] ;
+}
+
+- (void)actionBtOnCLick {
     [_tfAccount resignFirstResponder] ;
     [_tfPassword resignFirstResponder] ;
     
@@ -77,7 +84,7 @@
             }];
             
         }] ;
-                
+        
     }
     else {
         // email go regist straightly.
@@ -182,6 +189,43 @@
         self.btSepOfShowPassword.hidden = !hasInputed;
     }];
     
+    
+    //
+    [[[[NSNotificationCenter defaultCenter]
+       rac_addObserverForName:UIKeyboardWillShowNotification object:nil]
+      takeUntil:self.rac_willDeallocSignal]
+     subscribeNext:^(NSNotification *notification) {
+         
+         @strongify(self)
+         if ([self.tfAccount isFirstResponder]) {
+             [self.line1 startMove] ;
+             [self.line2 resetMove] ;
+         }
+         if ([self.tfPassword isFirstResponder]) {
+             [self.line2 startMove] ;
+             [self.line1 resetMove] ;
+         }
+         
+     }];
+    
+    [[[[NSNotificationCenter defaultCenter]
+       rac_addObserverForName:UIKeyboardWillHideNotification object:nil]
+      takeUntil:self.rac_willDeallocSignal]
+     subscribeNext:^(NSNotification *notification) {
+         
+         @strongify(self)
+         if ([self.tfAccount isFirstResponder]) {
+             [self.line1 resetMove] ;
+         }
+         if ([self.tfPassword isFirstResponder]) {
+             [self.line2 resetMove] ;
+         }
+     }];
+    
+    [[self.tfPassword rac_signalForControlEvents:UIControlEventEditingDidEndOnExit] subscribeNext:^(id x) {
+        @strongify(self)
+        [self sendVerifyCodeOnClick:nil] ;
+    }];
 }
 
 - (BOOL)mobileIsValid:(NSString *)mobile {

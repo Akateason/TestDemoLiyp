@@ -50,19 +50,25 @@
         return ;
     }
     
-    NSString *email ;
-    NSString *mobile ;
-    if ([self.account containsString:@"@"]) email = self.account ;
-    else mobile = self.account ;
     
-    @weakify(self)
-    [SMSHLoginAPIs resetPasswordWithMobile:mobile orEmail:email verifyCode:self.verifyCode password:self.tfpw2.text complete:^(BOOL bSuccess) {
-        @strongify(self)
-        if (bSuccess) {
-            [self.navigationController popToRootViewControllerAnimated:YES] ;
-            [SVProgressHUD showInfoWithStatus:@"设置成功, 请重新登录"] ;
-        }
+    [SMLoginAnimation zoomAndFade:sender complete:^{
+        
+        NSString *email ;
+        NSString *mobile ;
+        if ([self.account containsString:@"@"]) email = self.account ;
+        else mobile = self.account ;
+        
+        @weakify(self)
+        [SMSHLoginAPIs resetPasswordWithMobile:mobile orEmail:email verifyCode:self.verifyCode password:self.tfpw2.text complete:^(BOOL bSuccess) {
+            @strongify(self)
+            if (bSuccess) {
+                [self.navigationController popToRootViewControllerAnimated:YES] ;
+                [SVProgressHUD showInfoWithStatus:@"设置成功, 请重新登录"] ;
+            }
+        }] ;
+
     }] ;
+    
 }
 
 - (IBAction)showPwd1_OnClik:(UIButton *)sender {
@@ -128,6 +134,44 @@
                           self.lbAlert1.hidden = YES;
                           self.lbAlert2.hidden = YES ;
                       }] ;
+    
+    //
+    [[[[NSNotificationCenter defaultCenter]
+       rac_addObserverForName:UIKeyboardWillShowNotification object:nil]
+      takeUntil:self.rac_willDeallocSignal]
+     subscribeNext:^(NSNotification *notification) {
+         
+         @strongify(self)
+         if ([self.tfpw1 isFirstResponder]) {
+             [self.line1 startMove] ;
+             [self.line2 resetMove] ;
+         }
+         if ([self.tfpw2 isFirstResponder]) {
+             [self.line2 startMove] ;
+             [self.line1 resetMove] ;
+         }
+         
+     }];
+    
+    [[[[NSNotificationCenter defaultCenter]
+       rac_addObserverForName:UIKeyboardWillHideNotification object:nil]
+      takeUntil:self.rac_willDeallocSignal]
+     subscribeNext:^(NSNotification *notification) {
+         
+         @strongify(self)
+         if ([self.tfpw1 isFirstResponder]) {
+             [self.line1 resetMove] ;
+         }
+         if ([self.tfpw2 isFirstResponder]) {
+             [self.line2 resetMove] ;
+         }
+     }];
+    
+    [[self.tfpw2 rac_signalForControlEvents:UIControlEventEditingDidEndOnExit] subscribeNext:^(id x) {
+        @strongify(self)
+        [self btConfirmOnClick:nil] ;
+    }];
+
 }
 
 - (BOOL)passwordFormatIsValid:(NSString *)text {

@@ -12,11 +12,14 @@
 #import "SMSHLoginAPIs.h"
 #import "InputVerifyCodeVC.h"
 #import "SMSHLoginManager.h"
+#import "SMLoginAnimation.h"
+
 
 @interface ShimoVerifyLoginVC ()
 @property (weak, nonatomic) IBOutlet UITextField *tfAccount;
 @property (weak, nonatomic) IBOutlet UILabel *lbAlert;
 @property (weak, nonatomic) IBOutlet UIButton *btSendCode;
+@property (weak, nonatomic) IBOutlet BarUnderLoginTextInputLine *line1;
 
 @end
 
@@ -35,36 +38,40 @@
     if (!valided) _lbAlert.hidden = NO ;
 
     if (!valided) return ;
-
-    @weakify(self)
-    [InputVerifyCodeVC showFromCtrller:self.delegate.outsideCtrller
-                                mobile:self.tfAccount.text
-                                 email:nil
-                            scenceType:InputVerifyCodeVCType_login
-                            completion:^(BOOL success, NSString *code, InputVerifyCodeVC *ivcCtrller) {
-                                
-                                if (!success) return ;
-                                
-                                @strongify(self)
-                                [SMSHLoginAPIs getOauthTokenWithMobile:self.tfAccount.text mail:nil password:nil code:nil mobileVerifyCode:code geetestDic:nil complete:^(BOOL bSuccess, id json) {
-                                    
-                                    if (bSuccess) {
-                                        NSLog(@"登录成功") ;
-                                        [SVProgressHUD showSuccessWithStatus:@"登录成功"] ;
-                                        [ivcCtrller dismissViewControllerAnimated:YES completion:^{}] ;
-                                    }
-                                    else {
-                                        NSLog(@"登录失败") ;
-                                    }
-                                    
-                                    if ([[SMSHLoginManager sharedInstance].configure respondsToSelector:@selector(userLoginComplete:)]) {
-                                        [[SMSHLoginManager sharedInstance].configure userLoginComplete:success] ;
-                                    }
-
-                                }] ;
-                                
-                            }] ;
     
+    
+    [SMLoginAnimation zoomAndFade:sender complete:^{
+        
+        @weakify(self)
+        [InputVerifyCodeVC showFromCtrller:self.delegate.outsideCtrller
+                                    mobile:self.tfAccount.text
+                                     email:nil
+                                scenceType:InputVerifyCodeVCType_login
+                                completion:^(BOOL success, NSString *code, InputVerifyCodeVC *ivcCtrller) {
+                                    
+                                    if (!success) return ;
+                                    
+                                    @strongify(self)
+                                    [SMSHLoginAPIs getOauthTokenWithMobile:self.tfAccount.text mail:nil password:nil code:nil mobileVerifyCode:code geetestDic:nil complete:^(BOOL bSuccess, id json) {
+                                        
+                                        if (bSuccess) {
+                                            NSLog(@"登录成功") ;
+                                            [SVProgressHUD showSuccessWithStatus:@"登录成功"] ;
+                                            [ivcCtrller dismissViewControllerAnimated:YES completion:^{}] ;
+                                        }
+                                        else {
+                                            NSLog(@"登录失败") ;
+                                        }
+                                        
+                                        if ([[SMSHLoginManager sharedInstance].configure respondsToSelector:@selector(userLoginComplete:)]) {
+                                            [[SMSHLoginManager sharedInstance].configure userLoginComplete:success] ;
+                                        }
+
+                                    }] ;
+                                    
+                                }] ;
+     
+    }] ;
 }
 
 - (void)viewDidLoad {
@@ -82,6 +89,37 @@
         self.lbAlert.hidden = YES;
     }];
     
+    
+    //
+    @weakify(self)
+    [[[[NSNotificationCenter defaultCenter]
+       rac_addObserverForName:UIKeyboardWillShowNotification object:nil]
+      takeUntil:self.rac_willDeallocSignal]
+     subscribeNext:^(NSNotification *notification) {
+         
+         @strongify(self)
+         if ([self.tfAccount isFirstResponder]) {
+             [self.line1 startMove] ;
+         }
+         
+     }];
+    
+    [[[[NSNotificationCenter defaultCenter]
+       rac_addObserverForName:UIKeyboardWillHideNotification object:nil]
+      takeUntil:self.rac_willDeallocSignal]
+     subscribeNext:^(NSNotification *notification) {
+         
+         @strongify(self)
+         if ([self.tfAccount isFirstResponder]) {
+             [self.line1 resetMove] ;
+         }
+     }];
+    
+    [[self.tfAccount rac_signalForControlEvents:UIControlEventEditingDidEndOnExit] subscribeNext:^(id x) {
+        @strongify(self)
+        [self btSendCode:nil] ;
+    }];
+
 //    self.tfAccount.text = @"15000710541" ;
 }
 
